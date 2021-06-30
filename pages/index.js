@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Button from '../components/Button'
 import KoderProfileCard from '../components/KoderProfileCard'
 import ModuleBox from '../components/ModuleBox'
 
