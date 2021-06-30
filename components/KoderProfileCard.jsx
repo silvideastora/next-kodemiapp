@@ -4,7 +4,7 @@ import profilePic from '../assets/images/Nayeli.png'
 import classNames from 'classnames'
 
 export default function KoderProfileCard() {
-  return (
+    return (
     <div className="flex items-center h-screen w-full justify-center">
     
     <div className="w-40">
