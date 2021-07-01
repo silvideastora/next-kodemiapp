@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        primary:[ 'Poppins', 'sans-serif']
+      },
       colors: {
         blue: {
           light:'#0fff'
@@ -10,9 +13,6 @@ module.exports = {
         gray: {
           900:'#181818'
         }
-      },
-      fontFamily: {
-        'poppins': ['poppins']
       }
     },
   },
