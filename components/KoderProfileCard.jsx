@@ -16,18 +16,11 @@ export default function KoderProfileCard() {
                 <h3 className='text-center text-xl text-white font-medium leading-8'>Nayeli Gutiérrez</h3>
                 <div className='text-center text-gray-400 text-xs font-semibold'>
                 </div>
-                
-                    <tr className='block'>
-                        <td className='block text-center px-2 py-2'>@gutierreznaye</td>
-                    </tr>
-                    <tr className='block'>
-                    
-                        <td className='block text-center px-2 py-2'>Ciudad de México</td>
-                    </tr>
-                    <tr className='block'>
-                        <td class='block text-center px-2 py-2'>Generacion 13 JavaScript</td>
-                    </tr>
-                
+                <div>
+                        <span className='block text-center px-2 py-2'><i class="fab fa-github"></i> @gutierreznaye</span>
+                        <span className='block text-center px-2 py-2'>Ciudad de México</span>
+                        <span class='block text-center px-2 py-2 text-blue-light'>Generación 13 JavaScript</span>
+                </div>
             </div>
         </div>
     </div>
