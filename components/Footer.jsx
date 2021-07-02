@@ -8,11 +8,11 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="container mx-auto px-24">
-      <div>
+    <footer className="container mx-auto px-5 md:px-10 sm:px-8 xl:px-0">
+      <div className="sm:pl-4">
       <Image src={logo} alt="Logo" width="128" height="35"/>
         <div>
-          <Nav>
+          <Nav className="">
             <NavItem href="/featured" isActive>
               Programas
             </NavItem>

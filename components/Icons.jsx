@@ -11,7 +11,7 @@ import React from "react";
 
 export default function Icons() {
   return (
-    <div className="w-1/4 flex justify-between">
+    <div className="w-full md:w-2/3 lg:w-1/4 flex justify-around">
       <Image src={facebook} alt="facebook-icon" />
       <Image src={instagram} alt="instagram-icon" />
       <Image src={twitter} alt="twitter-icon" />
