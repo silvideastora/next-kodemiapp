@@ -1,27 +1,80 @@
-import React from 'react'
+import React, {useState} from 'react'
+import logoIcon from '../assets/icons/Tema-09 (2).svg'
+import Image from 'next/image'
 import classNames from 'classnames'
+import Modules from '../config/modules.json'
+
 
 export default function ModuleBox() {
+  const [selectedModule, setSelectedModule] = useState({});
+  const changeModule = (module)=> {
+    setSelectedModule(module);
+  }
   return (
-    <div className='flex items-center h-screen w-full justify-center'>
-      <div className='w-40'>
-          <div className='bg-gray-900 text-white shadow-xl rounded-lg py-6 -m-3'>
-              <div className='photo-wrapper px-7'>
-              </div>
+      <div className='grid grid-cols-3 gap-4'>
+        <div >
+            <div className={classNames(
+            'bg-gray-900',
+            'py-6',
+            'shadow-xl rounded-lg',
+            'text-white'
+            )}>
               <div className='p-2'>
-                <ul>
-                  <li className=' block text-xl text-center font-medium px-2 py-2 hover:text-blue-light'>Hello koders</li>
-                  <li className='block text-xl text-center font-medium px-2 py-2 hover:text-blue-light'>Front End</li>
-                  <li className='block text-xl text-center font-medium px-2 py-2 hover:text-blue-light'>Back End</li>
-                  <li className='block text-xl text-center font-medium px-2 py-2 hover:text-blue-light'>Front End Moderno</li>
-                  <li className='block text-xl text-center font-medium px-2 py-2 hover:text-blue-light'>Cloud</li>
-                  <li className='block text-xl text-center font-medium px-2 py-2 hover:text-blue-light'>Talleres</li>
-                </ul>
-              </div>
+                  <ul> 
+                    {Modules.map((module,index) => ( 
+                      <li onClick={(e) => changeModule(module)} key={index} className={classNames (
+                        'block text-xl text-center font-medium',
+                        'hover:text-blue-light',
+                        'px-2 py-2' 
+                      )}>{module.title}</li>
+                    ) ) }
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div className="col-span-2">
+          <div className= {classNames(
+            'bg-gray-900',
+            'py-11', 
+            'rounded-lg',
+            'text-white'
+          )} >
+            <h3>Módulo {selectedModule.title}</h3>
+            <p>{selectedModule.description}</p>
+            <div>
+              <ul className='grid grid-cols-6'>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                <li>
+                  <Image src={logoIcon} alt=''/>
+                </li>
+                
+              </ul>
+            </div>
           </div>
+        </div>
       </div>
-      
-      </div>
-      
   )
   }

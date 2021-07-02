@@ -3,23 +3,45 @@ import Image from 'next/image'
 import profilePic from '../assets/images/Nayeli.png'
 import classNames from 'classNames'
 
-export default function KoderProfileCard() {
+
+
+export default function KoderProfileCard({koder}) {
+
     return (
-    <div className='flex items-center h-screen w-full justify-center'>
-    
-    <div className='w-40'>
-        <div className='bg-black text-white shadow-xl rounded-lg py-6 -m-3'>
-            <div className='photo-wrapper px-7'>
-                <Image className='w-4 h-4 rounded-full' src={profilePic} alt='Nayeli.png'/>
+    <div className={classNames(
+        'flex items-center',
+        'justify-center',
+        'w-full')}>
+    <div className='w-full'>
+        <div className={classNames(
+            'bg-black',
+            'py-6',
+            'rounded-lg',
+            'shadow-xl',
+            'text-white')}>
+            <div className={classNames(
+                'mx-auto', 
+                'px-7',
+                'w-3/6  ')}>
+                <Image className={classNames(
+                    'h-auto',
+                    'max-w-full',
+                    'rounded-full w-full'
+                )} src={profilePic}/>
             </div>
             <div className='p-2'>
-                <h3 className='text-center text-xl text-white font-medium leading-8'>Nayeli Gutiérrez</h3>
-                <div className='text-center text-gray-400 text-xs font-semibold'>
+            <h3 className={classNames(
+                'font-medium',
+                'text-center text-xl text-white'
+                )}>{koder.name} {koder.lastName}</h3>
+                <div className={classNames(
+                    'font-semibold',
+                    'text-center text-gray-400 text-xs')}>
                 </div>
                 <div>
-                        <span className='block text-center px-2 py-2'><i class="fab fa-github"></i> @gutierreznaye</span>
-                        <span className='block text-center px-2 py-2'>Ciudad de México</span>
-                        <span class='block text-center px-2 py-2 text-blue-light'>Generación 13 JavaScript</span>
+                    <span className='block text-center px-2 py-2'><i className="fab fa-github"></i> @{koder.github}</span>
+                    <span className='block text-center px-2 py-2'>{koder.location}</span>
+                        <span class='block text-center px-2 py-2 text-blue-light'>Generación {koder.generation} </span>
                 </div>
             </div>
         </div>

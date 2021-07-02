@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Hello Koders",
+        "description": "Aprenderemos ...",
+        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+    },{
+        "title": "Front End",
+        "description": "Aprenderemos front",
+        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+    },{
+        "title": "Back End",
+        "description": "Aprenderemos ...",
+        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+    },{
+        "title": "Front End Moderno",
+        "description": "Aprenderemos ...",
+        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+    },{
+        "title": "Cloud",
+        "description": "Aprenderemos ...",
+        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+    },{
+        "title": "Talleres",
+        "description": "Aprenderemos ...",
+        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+    }
+]
