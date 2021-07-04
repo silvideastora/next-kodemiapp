@@ -7,7 +7,7 @@ import classNames from 'classnames'
 export default function Home() {
   return (
     <>
-      <body className="bg-black">
+      <section className="bg-black">
         <Navbar />
         <div className={classNames(
           'container mx-auto h-screen',
@@ -37,7 +37,7 @@ export default function Home() {
             {/* <Button /> */}
           </div>
         </div>
-      </body>
+      </section>
       <div className="bg-black">
         <Footer />
       </div>

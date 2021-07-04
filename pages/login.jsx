@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 import classNames from 'classnames'
 
 export default function login() {
   return (
     <>
-      <body className="bg-black">
+      <section className="bg-black">
         <Navbar />
         <div className={classNames(
           'container mx-auto flex justify-center items-center h-screen',
@@ -22,6 +23,35 @@ export default function login() {
             )}>
               <form class="relative">
                 <h2 className="block text-center mb-14 text-2xl">Bienvenido<span className="text-acua-ka animate-ping text-3xl">_</span></h2>
+                <div className="flex-auto flex space-x-3 justify-between">
+                  <div className={classNames(
+                        'mt-12 w-6/12 h-10',
+                        'flex items-center',
+                        'rounded-md bg-transparent hover:bg-acua-ka hover:text-black-ka text-white border-2 border-acua-ka'
+                      )}>
+                    <input
+                      type='radio'
+                      className='ml-5'
+                    />
+                    <label className='ml-5'>
+                      Koder
+                  </label>
+                  </div>
+                  <div className={classNames(
+                        'mt-12 w-6/12 h-10',
+                        'flex items-center',
+                        'rounded-md bg-transparent hover:bg-acua-ka hover:text-black-ka text-white border-2 border-acua-ka'
+                      )}>
+                    <input
+                      type='radio'
+                      className='ml-5'
+                    />
+                    <label className='ml-5'>
+                      Mentor
+                  </label>
+                  </div>
+                </div>
+                
                 <label className="block text-center my-6 text-xl mb-6 mt-10" htmlFor="">
                   Usuario
                 </label>
@@ -32,11 +62,11 @@ export default function login() {
                   className={classNames(
                     'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none',
                     'w-full text-lg py-1 pl-5',
-                    'text-black placeholder-gray-500 border border-gray-200 rounded-md'
+                    'placeholder-acua-ka border-2 border-acua-ka rounded-md bg-black text-acua-ka'
                   )}
-                  type="text"
-                  aria-label="Filter projects"
-                  placeholder="usuario@ejemplo.com"
+                  type='text'
+                  aria-label='Filter projects'
+                  placeholder='usuario@ejemplo.com'
                 />
                 <label className="block text-center mb-6 mt-10 text-xl" htmlFor="">
                   Contraseña
@@ -45,27 +75,39 @@ export default function login() {
                   className={classNames(
                     'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none',
                     'w-full text-lg py-1 pl-5',
-                    'text-black placeholder-gray-500 border border-gray-200 rounded-md'
+                    'placeholder-acua-ka border-2 border-acua-ka rounded-md bg-black text-acua-ka'
                   )}
                   type="password"
                   aria-label="Filter projects"
                   placeholder="contraseña"
                 />
+                <Link href="/password-forgot">
+                  <a className={classNames(
+                    'mt-2 flex justify-end',
+                    'hover:underline hover:text-acua-ka'
+                  )}>Olvide la contraseña</a>
+                </Link>
                 <button
                   className={classNames(
                     'mt-12 w-full h-10',
                     'flex items-center justify-center',
-                    'rounded-md bg-transparent hover:bg-acua-ka text-white border-2 border-acua-ka'
+                    'rounded-md bg-transparent hover:bg-acua-ka hover:text-black text-white border-2 border-acua-ka'
                   )}
                   type="submit"
                 >
                   Ingresar
                 </button>
+                <Link href="/help">
+                  <a className={classNames(
+                    'mt-2 flex justify-end',
+                    'hover:underline hover:text-acua-ka'
+                  )}>Necesito ayuda</a>
+                </Link>
               </form>
             </div>
           </div>
         </div>
-      </body>
+      </section>
       <Footer />
     </>
   );
