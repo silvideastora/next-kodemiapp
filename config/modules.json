@@ -2,26 +2,32 @@
     {
         "title": "Hello Koders",
         "description": "Aprenderemos ...",
-        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+        "icons": ["/icons/python.svg"]
+
     },{
         "title": "Front End",
         "description": "Aprenderemos front",
-        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+        "icons": ["/icons/python.svg"]
+
     },{
         "title": "Back End",
         "description": "Aprenderemos ...",
-        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+        "icons": ["/icons/python.svg"]
+
     },{
         "title": "Front End Moderno",
         "description": "Aprenderemos ...",
-        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+        "icons": ["/icons/python.svg"]
+
     },{
         "title": "Cloud",
         "description": "Aprenderemos ...",
-        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+        "icons": ["/icons/python.svg"]
+
     },{
         "title": "Talleres",
         "description": "Aprenderemos ...",
-        "icons": ["diagrama-flujo.svg", "pensamiento.svg"]
+        "icons": ["/icons/python.svg"]
+
     }
 ]

@@ -7,11 +7,11 @@ module.exports = {
         primary:[ 'Poppins', 'sans-serif']
       },
       colors: {
-        blue: {
-          light:'#0fff'
+        'cyan-kodemiapp': {
+          DEFAULT:'#0fff'
         },
-        gray: {
-          900:'#181818'
+        'gray-kodemiapp': {
+          DEFAULT:'#181818'
         }
       }
     },

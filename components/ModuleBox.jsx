@@ -1,12 +1,9 @@
 import React, {useState} from 'react'
-import logoIcon from '../assets/icons/Tema-09 (2).svg'
-import Image from 'next/image'
 import classNames from 'classnames'
 import Modules from '../config/modules.json'
 
-
-export default function ModuleBox() {
-  const [selectedModule, setSelectedModule] = useState({});
+export default function ModuleBox( ) {
+  const [selectedModule, setSelectedModule] = useState({icons:[]});
   const changeModule = (module)=> {
     setSelectedModule(module);
   }
@@ -19,7 +16,7 @@ export default function ModuleBox() {
             'shadow-xl rounded-lg',
             'text-white'
             )}>
-              <div className='p-2'>
+              <div className='p-2s'>
                   <ul> 
                     {Modules.map((module,index) => ( 
                       <li onClick={(e) => changeModule(module)} key={index} className={classNames (
@@ -32,7 +29,7 @@ export default function ModuleBox() {
                 </div>
             </div>
         </div>
-        <div className="col-span-2">
+        <div className='col-span-2'>
           <div className= {classNames(
             'bg-gray-900',
             'py-11', 
@@ -43,34 +40,11 @@ export default function ModuleBox() {
             <p>{selectedModule.description}</p>
             <div>
               <ul className='grid grid-cols-6'>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                <li>
-                  <Image src={logoIcon} alt=''/>
-                </li>
-                
+                {selectedModule.icons.map((icon, index) =>( 
+                  <li key={index}>
+                    <img src={icon} alt={`${icon}-icon`} />
+                  </li>)
+                )}
               </ul>
             </div>
           </div>

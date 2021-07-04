@@ -1,53 +1,48 @@
-import React from 'react'
-import Image from 'next/image'
-import profilePic from '../assets/images/Nayeli.png'
+//import React from 'react'
 import classNames from 'classNames'
 
-
-
-export default function KoderProfileCard({koder}) {
-
-    return (
+export default function KoderProfileCard({ koder }) {
+  return (
     <div className={classNames(
-        'flex items-center',
-        'justify-center',
-        'w-full')}>
-    <div className='w-full'>
-        <div className={classNames(
-            'bg-black',
-            'py-6',
-            'rounded-lg',
-            'shadow-xl',
-            'text-white')}>
-            <div className={classNames(
-                'mx-auto', 
-                'px-7',
-                'w-3/6  ')}>
-                <Image className={classNames(
-                    'h-auto',
-                    'max-w-full',
-                    'rounded-full w-full'
-                )} src={profilePic}/>
-            </div>
-            <div className='p-2'>
-            <h3 className={classNames(
-                'font-medium',
-                'text-center text-xl text-white'
-                )}>{koder.name} {koder.lastName}</h3>
-                <div className={classNames(
-                    'font-semibold',
-                    'text-center text-gray-400 text-xs')}>
-                </div>
-                <div>
-                    <span className='block text-center px-2 py-2'><i className="fab fa-github"></i> @{koder.github}</span>
-                    <span className='block text-center px-2 py-2'>{koder.location}</span>
-                        <span class='block text-center px-2 py-2 text-blue-light'>Generación {koder.generation} </span>
-                </div>
-            </div>
-        </div>
+      'bg-black',
+        'py-6 px-4',
+        'rounded-lg',
+        'flex flex-col',
+        'items-center justify-center',
+        'text-white',
+        'w-full'
+    )}>
+    <div className={classNames(
+      'mx-auto',
+      'mt-2'
+    )}>
+      <img 
+        className={classNames(
+          'rounded-full',
+          'w-20'
+      )}
+        src={koder.image}
+      />
     </div>
-    
+    <div className='pt-5 text-center'>
+      <h3 className={classNames(
+        'font-medium',
+        'text-base lg:text-xl'
+      )}>
+        {koder.name} {koder.lastName}
+      </h3>
+        <span className='text-xs lg:text-base'>
+          <i className='fab fa-github mr-2' />
+          @{koder.github}
+        </span>
+        <p>{koder.location}</p>
+        <p className={classNames(
+          'pt-4',
+          'text-cyan-kodemiapp'
+        )}>
+          Generación {koder.generation} 
+        </p>
     </div>
-    
+</div>
 )
 }
