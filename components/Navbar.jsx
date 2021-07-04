@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../src/images/logo.svg'
+// import logo from '../src/images/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import classNames from 'classnames'
@@ -16,7 +16,7 @@ export default function Navbar() {
         'bg-gray-900 bg-opacity-25', 
         'px-5 md:px-10 sm:px-8 xl:px-0'
       )}>
-        <Image src={logo} alt="Logo" width="128" height="35"/>
+        {/* <Image src={logo} alt="Logo" width="128" height="35"/> */}
         <Link href="/login">
           <button
             className={classNames(

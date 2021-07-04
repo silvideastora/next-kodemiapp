@@ -1,11 +1,7 @@
 import React from 'react'
-import logo from '../src/images/logo.svg'
 import Nav from './Nav'
 import NavItem from './NavItem'
-import Icons from './Icons'
-import Image from 'next/image'
 import classNames from 'classnames'
-// import Button from "./Button";
 
 export default function Footer() {
   return (
@@ -14,7 +10,10 @@ export default function Footer() {
       'px-5 md:px-10 sm:px-8 xl:px-0'
     )}>
       <div className="sm:pl-4">
-      <Image src={logo} alt="Logo" width="128" height="35"/>
+        <img src='/images/logo.svg' alt="Logo" className={classNames(
+        'w-32'
+        )}
+        />
         <div>
           <Nav className="">
             <NavItem href="/featured" isActive>
@@ -30,8 +29,15 @@ export default function Footer() {
             <NavItem href="/recent">Alumnos </NavItem>
           </Nav>
         </div>
-        <Icons/>
-        {/* <Button/> */}
+        <div className={classNames(
+          'w-full md:w-2/3 lg:w-1/4',
+          'flex justify-around'
+        )}
+        >
+          {/* {
+            Aquí va el map
+          } */}
+        </div>
         <div className="my-4">
           <p>Tonalá 10, Roma Norte, Cuauhtémoc,</p>
           <p>03800 Ciudad de México, CDMX</p>

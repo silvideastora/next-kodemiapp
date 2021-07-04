@@ -10,7 +10,11 @@ export default function login() {
       <section className="bg-black">
         <Navbar />
         <div className={classNames(
-          'container mx-auto flex justify-center items-center h-screen',
+          'container',
+          'flex',
+          'justify-center items-center',
+          'h-screen',
+          'mx-auto',
           'px-5 md:px-10 sm:px-8 xl:px-0'
         )}>
           <div className={classNames(
