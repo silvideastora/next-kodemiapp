@@ -7,14 +7,17 @@ import classNames from 'classnames'
 export default function Home() {
   return (
     <>
-      <section className="bg-black">
+      <section className='bg-black'>
         <Navbar />
         <div className={classNames(
-          'container mx-auto h-screen',
-          'flex items-center',
+          'container',
+          'mx-auto', 
+          'h-screen',
+          'flex',
+          'items-center',
           'md:px-10 sm:px-8 xl:px-0'
         )}>
-          <div className="max-w-full md:max-w-md xl:max-w-lg">
+          <div className='max-w-full md:max-w-md xl:max-w-lg'>
             <h2 className={classNames(
               'text-white font-semibold',
               'md:text-left md:text-2xl lg:text-3xl xl:text-4xl',
@@ -22,14 +25,15 @@ export default function Home() {
             )}>
               ¿Listo para transformar tu vida programando?
             </h2>
-            <Link href="/login">
+            <Link href='/login'>
               <button
                 className={classNames(
                   'mt-6 w-full md:w-1/2 h-10',
-                  'flex items-center justify-center',
-                  'rounded-md bg-transparent hover:bg-acua-ka text-white border-2 border-acua-ka'
+                  'flex',
+                  'items-center justify-center',
+                  'rounded-md bg-transparent hover:bg-acua-ka text-white border-2 border-cyan-ka'
                 )}
-                type="submit"
+                type='submit'
               >
                 Iniciar sesión
               </button>
@@ -38,7 +42,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="bg-black">
+      <div className='bg-black'>
         <Footer />
       </div>
     </>

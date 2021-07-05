@@ -7,7 +7,7 @@ import classNames from 'classnames'
 export default function login() {
   return (
     <>
-      <section className="bg-black">
+      <section className='bg-black'>
         <Navbar />
         <div className={classNames(
           'container',
@@ -22,16 +22,26 @@ export default function login() {
             'w-full md:w-3/4 lg:w-2/3 xl:w-1/4'
           )}>
             <div className={classNames(
-              'flex-row justify-center items-center',
+              'flex-row',
+              'justify-center items-center',
               'bg-transparent'
             )}>
-              <form class="relative">
-                <h2 className="block text-center mb-14 text-2xl">Bienvenido<span className="text-acua-ka animate-ping text-3xl">_</span></h2>
-                <div className="flex-auto flex space-x-3 justify-between">
+              <form class='relative'>
+                <h2 className={classNames(
+                  'block',
+                  'text-center',
+                  'mb-14',
+                  'text-2xl'
+                )}
+                  >Bienvenido<span className={classNames(
+                    'text-cyan-ka',
+                    'animate-ping',
+                    'text-5xl'
+                  )}>_</span></h2>
+                {/* <div className='flex-auto flex space-x-3 justify-between'>
                   <div className={classNames(
                         'mt-12 w-6/12 h-10',
-                        'flex items-center',
-                        'rounded-md bg-transparent hover:bg-acua-ka hover:text-black-ka text-white border-2 border-acua-ka'
+                        'flex items-center'
                       )}>
                     <input
                       type='radio'
@@ -39,24 +49,18 @@ export default function login() {
                     />
                     <label className='ml-5'>
                       Koder
-                  </label>
-                  </div>
-                  <div className={classNames(
-                        'mt-12 w-6/12 h-10',
-                        'flex items-center',
-                        'rounded-md bg-transparent hover:bg-acua-ka hover:text-black-ka text-white border-2 border-acua-ka'
-                      )}>
+                    </label>
                     <input
                       type='radio'
                       className='ml-5'
                     />
                     <label className='ml-5'>
                       Mentor
-                  </label>
+                    </label>
                   </div>
-                </div>
+                </div> */}
                 
-                <label className="block text-center my-6 text-xl mb-6 mt-10" htmlFor="">
+                <label className='block text-center my-6 text-xl mb-4 mt-10'>
                   Usuario
                 </label>
                 {/* <svg width="20" height="20" fill="currentColor" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
@@ -66,45 +70,47 @@ export default function login() {
                   className={classNames(
                     'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none',
                     'w-full text-lg py-1 pl-5',
-                    'placeholder-acua-ka border-2 border-acua-ka rounded-md bg-black text-acua-ka'
+                    'border-2 border-cyan-ka rounded-md bg-black'
                   )}
                   type='text'
                   aria-label='Filter projects'
                   placeholder='usuario@ejemplo.com'
                 />
-                <label className="block text-center mb-6 mt-10 text-xl" htmlFor="">
+                <label className='block text-center mb-4 mt-10 text-xl'>
                   Contraseña
                 </label>
                 <input
                   className={classNames(
                     'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none',
                     'w-full text-lg py-1 pl-5',
-                    'placeholder-acua-ka border-2 border-acua-ka rounded-md bg-black text-acua-ka'
+                    'border-2 border-cyan-ka rounded-md bg-black'
                   )}
-                  type="password"
-                  aria-label="Filter projects"
-                  placeholder="contraseña"
+                  type='password'
+                  aria-label='Filter projects'
+                  placeholder='contraseña'
                 />
-                <Link href="/password-forgot">
+                <Link href='/password-forgot'>
                   <a className={classNames(
                     'mt-2 flex justify-end',
-                    'hover:underline hover:text-acua-ka'
+                    'hover:underline hover:text-cyan-ka'
                   )}>Olvide la contraseña</a>
                 </Link>
                 <button
                   className={classNames(
                     'mt-12 w-full h-10',
                     'flex items-center justify-center',
-                    'rounded-md bg-transparent hover:bg-acua-ka hover:text-black text-white border-2 border-acua-ka'
+                    'rounded-md bg-transparent text-white border-2 border-cyan-ka',
+                    'hover:bg-cyan-ka hover:text-black'
                   )}
-                  type="submit"
+                  type='submit'
                 >
                   Ingresar
                 </button>
-                <Link href="/help">
+                <Link href='/help'>
                   <a className={classNames(
-                    'mt-2 flex justify-end',
-                    'hover:underline hover:text-acua-ka'
+                    'flex justify-end',
+                    'mt-2',
+                    'hover:underline hover:text-cyan-ka'
                   )}>Necesito ayuda</a>
                 </Link>
               </form>

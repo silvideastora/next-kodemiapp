@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import NavItem from './NavItem'
 import classNames from 'classnames'
+import Icons from './Icons'
 
 export default function Footer() {
   return (
@@ -15,39 +16,34 @@ export default function Footer() {
         )}
         />
         <div>
-          <Nav className="">
-            <NavItem href="/featured" isActive>
+          <Nav>
+            <NavItem href='/https://kodemia.mx/#bootcamps' className='hover:text-cyan-ka'>
               Programas
             </NavItem>
             <NavItem href="/featured">
               |
             </NavItem>
-            <NavItem href="/popular">Empresas</NavItem>
-            <NavItem href="/featured">
+            <NavItem href='/https://kodemia.mx/empresas'>Empresas</NavItem>
+            <NavItem href='/#'>
               |
             </NavItem>
-            <NavItem href="/recent">Alumnos </NavItem>
+            <NavItem href="/https://kodemia.mx/login">Alumnos </NavItem>
           </Nav>
         </div>
-        <div className={classNames(
-          'w-full md:w-2/3 lg:w-1/4',
-          'flex justify-around'
-        )}
-        >
-          {/* {
-            Aquí va el map
-          } */}
+        <div>
+          <Icons/>
         </div>
-        <div className="my-4">
+        <div className='my-4'>
           <p>Tonalá 10, Roma Norte, Cuauhtémoc,</p>
           <p>03800 Ciudad de México, CDMX</p>
         </div>
         <div className={classNames(
-          'flex justify-between',
+          'flex',
+          'justify-between',
           'border-t-2 border-white'
         )}>
-          <p className="mt-3">Kodemia<span>&copy</span> 2021. Todos los derechos reservados</p>
-          <p className="mt-3">Aviso de Privacidad</p>
+          <p className='mt-3'>Kodemia<span>&copy</span> 2021. Todos los derechos reservados</p>
+          <p className='mt-3'>Aviso de Privacidad</p>
         </div>
         
       </div>
