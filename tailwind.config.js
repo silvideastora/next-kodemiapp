@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary:[ 'Poppins', 'sans-serif']
+        primary:[ 'mono', 'sans']
+
       },
       colors: {
         'cyan-kodemiapp': {
@@ -12,7 +13,13 @@ module.exports = {
         },
         'gray-kodemiapp': {
           DEFAULT:'#181818'
+        },
+        'gray-inactive': {
+          DEFAULT: '#4E4E4E'
         }
+      },
+      screens: {
+        'xs': {'max': '640px', 'min': '350px'}
       }
     },
   },

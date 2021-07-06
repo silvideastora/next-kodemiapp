@@ -1,16 +1,17 @@
 //import React from 'react'
-import classNames from 'classNames'
+import classNames from 'classnames'
 
 export default function KoderProfileCard({ koder }) {
   return (
     <div className={classNames(
-      'bg-black',
+        'bg-black',
         'py-6 px-4',
         'rounded-lg',
         'flex flex-col',
         'items-center justify-center',
         'text-white',
-        'w-full'
+        'w-full',
+        'xs:mb-0.5'
     )}>
     <div className={classNames(
       'mx-auto',

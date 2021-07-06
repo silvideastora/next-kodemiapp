@@ -1,7 +1,6 @@
 [
     {
       "title": "Hello Koders",
-      "description": "Aprenderemos ...",
       "topics": [
         {
           "title":"Pensamiento estructurado",           
@@ -36,7 +35,6 @@
     },
     {
       "title": "Front End",
-      "description": "Aprenderemos las bases principales de JavaScript",
       "topics": [ 
         {
           "title": "Git & Github",
@@ -79,7 +77,6 @@
     },
     {
       "title": "Back End",
-      "description": "Aprenderemos ...",
       "topics": [
         {
           "title": "Linux / Consola",
@@ -133,7 +130,6 @@
 
     },{
         "title": "Front End Moderno",
-        "description": "Aprenderemos ...",
         "topics": [
             {
               "title": "React",
@@ -160,7 +156,6 @@
     },
     {
         "title": "Talleres",
-        "description": "Aprenderemos ...",
         "topics": [
           {
             "title": "Github Avanzado",
@@ -190,10 +185,6 @@
             "title": "JamStack",
             "icon": "/icons/talleres/jamstack.svg"
           }
-          
         ]
-        
-        
-
     }
 ]
