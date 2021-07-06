@@ -10,7 +10,7 @@ export default function Footer() {
       'container mx-auto',
       'px-5 md:px-10 sm:px-8 xl:px-0'
     )}>
-      <div className="sm:pl-4">
+      <div className='sm:pl-4 xl:px-0'>
         <img src='/images/logo.svg' alt="Logo" className={classNames(
         'w-32'
         )}
@@ -20,14 +20,14 @@ export default function Footer() {
             <NavItem href='/https://kodemia.mx/#bootcamps' className='hover:text-cyan-ka'>
               Programas
             </NavItem>
-            <NavItem href="/featured">
+            <NavItem href='/featured'>
               |
             </NavItem>
             <NavItem href='/https://kodemia.mx/empresas'>Empresas</NavItem>
             <NavItem href='/#'>
               |
             </NavItem>
-            <NavItem href="/https://kodemia.mx/login">Alumnos </NavItem>
+            <NavItem href='/https://kodemia.mx/login'>Alumnos </NavItem>
           </Nav>
         </div>
         <div>

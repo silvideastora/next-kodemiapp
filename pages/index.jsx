@@ -15,7 +15,7 @@ export default function Home() {
           'h-screen',
           'flex',
           'items-center',
-          'md:px-10 sm:px-8 xl:px-0'
+          'px-5 md:px-10 sm:px-8 xl:px-0'
         )}>
           <div className='max-w-full md:max-w-md xl:max-w-lg'>
             <h2 className={classNames(

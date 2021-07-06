@@ -1,8 +1,7 @@
-import React from 'react';
-// import logo from '../src/images/logo.svg'
-import Image from 'next/image';
-import Link from 'next/link';
-import classNames from 'classnames';
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import classNames from 'classnames'
 
 export default function Navbar() {
   return (
@@ -34,7 +33,7 @@ export default function Navbar() {
           </a>
           
         </Link>
-        {/* <Link href="/login">
+        {/* <Link href="/login"> // ! Este es el boton de inicio de sesión que muy probablemente ya no se use pero tal vez el de cerrar sesion si 
           <button
             className={classNames(
               "sm:w-2/3 md:w-1/4 lg:w-1/6 h-9", // responsive
