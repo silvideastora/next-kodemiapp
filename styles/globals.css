@@ -1,4 +1,18 @@
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+
+
+
+@layer components {
+    .slick-dots li.slick-active button:before {
+        @apply text-cyan-kodemiapp;
+    }
+    .slick-dots li button:before {
+        color: red;
+    }
+  }
