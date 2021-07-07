@@ -8,11 +8,22 @@ module.exports = {
     extend: {
       colors: {
         'black-ka': {
-          dark: '#0e0e0e',
-          DEFAULT: '#181818'
+          DEFAULT: '#181818',
+          variant: '#0e0e0e'
         },
         'cyan-ka': {
-          DEFAULT: '#00ffff'
+          DEFAULT: '#00ffff',
+          variant: '#07baba'
+        },
+        'gray-ka': {
+          DEFAULT: '#4e4e4e',
+          variant: '#828282'
+        },
+        'white-ka': {
+          DEFAULT: '#fbfbfb'
+        },
+        'error-ka': {
+          DEFAULT: '#f95249'
         }
       }
     }

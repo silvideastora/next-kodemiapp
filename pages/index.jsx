@@ -7,7 +7,7 @@ import classNames from 'classnames'
 export default function Home() {
   return (
     <>
-      <section className='bg-black'>
+      <section className='bg-black-ka-variant'>
         <Navbar />
         <div className={classNames(
           'container',
@@ -19,9 +19,9 @@ export default function Home() {
         )}>
           <div className='max-w-full md:max-w-md xl:max-w-lg'>
             <h2 className={classNames(
-              'text-white font-semibold',
-              'md:text-left md:text-2xl lg:text-3xl xl:text-4xl',
-              'text-center text-2xl  -mt-24'
+              'text-white-ka font-semibold',
+              'md:text-left lg:text-3xl xl:text-4xl text-center text-2xl',
+              '-mt-24'
             )}>
               ¿Listo para transformar tu vida programando?
             </h2>
@@ -31,18 +31,17 @@ export default function Home() {
                   'mt-6 w-full md:w-1/2 h-10',
                   'flex',
                   'items-center justify-center',
-                  'rounded-md bg-transparent hover:bg-acua-ka text-white border-2 border-cyan-ka'
+                  'rounded-md bg-transparent hover:bg-acua-ka text-white-ka border-2 border-cyan-ka'
                 )}
                 type='submit'
               >
                 Iniciar sesión
               </button>
             </Link>
-            {/* <Button /> */}
           </div>
         </div>
       </section>
-      <div className='bg-black'>
+      <div className='bg-black-ka-variant'>
         <Footer />
       </div>
     </>

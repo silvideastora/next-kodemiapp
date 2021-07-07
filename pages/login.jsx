@@ -14,7 +14,7 @@ export default function login() {
 
   return (
     <>
-      <section className='bg-black'>
+      <section className='bg-black-ka-variant'>
         <Navbar />
         <div className={classNames(
           'container',
@@ -50,7 +50,7 @@ export default function login() {
                 })}
                   className={classNames(
                     'w-full',
-                    'bg-black',
+                    'bg-black-ka',
                     'border-2 border-cyan-ka',
                     'rounded-md',
                     'h-10',
@@ -62,7 +62,7 @@ export default function login() {
                   <option value='mentor'>Mentor</option>
                 </select>
                 {errors.name && (
-                  <span className='text-red-500'>
+                  <span className='text-error-ka'>
                     <li>{errors.typeUser.message}</li>
                   </span>
                 )}
@@ -76,14 +76,14 @@ export default function login() {
                   className={classNames(
                     'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none focus:bg-black',
                     'w-full text-lg py-1 pl-5',
-                    'border-2 border-cyan-ka rounded-md bg-black'
+                    'border-2 border-cyan-ka rounded-md bg-black-ka'
                   )}
                   type='email'
                   aria-label='Filter projects'
                   placeholder='usuario@ejemplo.com'
                 />
                 {errors.email && (
-                  <span className='text-red-500'>
+                  <span className='text-error-ka'>
                     <li>{errors.email.message}</li>
                   </span>
                 )}
@@ -97,23 +97,23 @@ export default function login() {
                   className={classNames(
                     'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none',
                     'w-full text-lg py-1 pl-5',
-                    'border-2 border-cyan-ka rounded-md bg-black'
+                    'border-2 border-cyan-ka rounded-md bg-black-ka'
                   )}
                   type='password'
                   aria-label='Filter projects'
                   placeholder='contraseña'
                 />
                 {errors.password && (
-                  <span className='text-red-500'>
+                  <span className='text-error-ka'>
                     <li>{errors.password.message}</li>
                   </span>
                 )}
                 <button
                   className={classNames(
-                    'mt-12 w-full h-10',
+                    'mt-20 w-full h-10',
                     'flex items-center justify-center',
-                    'rounded-md bg-transparent text-white border-2 border-cyan-ka',
-                    'hover:bg-cyan-ka hover:text-black'
+                    'rounded-md bg-transparent text-white-ka border-2 border-cyan-ka',
+                    'hover:bg-cyan-ka hover:text-black-ka'
                   )}
                   type='submit'
                 >

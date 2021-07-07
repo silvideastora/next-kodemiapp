@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import NavItem from './NavItem'
 import classNames from 'classnames'
-import Icons from './Icons'
+import FooterIcons from './FooterIcons'
 
 export default function Footer() {
   return (
@@ -11,13 +11,14 @@ export default function Footer() {
       'px-5 md:px-10 sm:px-8 xl:px-0'
     )}>
       <div className='sm:pl-4 xl:px-0'>
-        <img src='/images/logo.svg' alt="Logo" className={classNames(
-        'w-32'
-        )}
+        <img 
+          src='/images/logo.svg' 
+          alt='Logo' 
+          className={classNames('w-32 icon-hover')}
         />
         <div>
           <Nav>
-            <NavItem href='/https://kodemia.mx/#bootcamps' className='hover:text-cyan-ka'>
+            <NavItem href='/https://kodemia.mx/#bootcamps'>
               Programas
             </NavItem>
             <NavItem href='/featured'>
@@ -31,7 +32,7 @@ export default function Footer() {
           </Nav>
         </div>
         <div>
-          <Icons/>
+          <FooterIcons/>
         </div>
         <div className='my-4'>
           <p>Tonalá 10, Roma Norte, Cuauhtémoc,</p>
@@ -40,7 +41,7 @@ export default function Footer() {
         <div className={classNames(
           'flex',
           'justify-between',
-          'border-t-2 border-white'
+          'border-t-2 border-white-ka'
         )}>
           <p className='mt-3'>Kodemia<span>&copy</span> 2021. Todos los derechos reservados</p>
           <p className='mt-3'>Aviso de Privacidad</p>

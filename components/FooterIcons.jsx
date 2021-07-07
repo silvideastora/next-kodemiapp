@@ -1,5 +1,5 @@
 
-import icons from '../config/icons.json'
+import icons from '../config/FooterIcons.json'
 import classNames from 'classnames'
 import React from 'react'
 
@@ -17,7 +17,7 @@ export default function Icons() {
           <img
             src={icon.location}
             alt={icon.name}
-            className={classNames('w-8')}
+            className={classNames('w-8 icon-hover')}
           />
         </a>
       ))}

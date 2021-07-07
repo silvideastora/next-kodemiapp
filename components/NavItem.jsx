@@ -1,10 +1,16 @@
+import classNames from 'classnames'
 
-export default function NavItem({ href, isActive, children }) {
+export default function NavItem({ href, children }) {
   return (
     <li>
       <a
         href={href}
-        className={`block px-1 py-2 rounded-md text-white ${isActive ? 'bg-amber-100 text-amber-700' : ''}`}
+        className={classNames(
+          'block',
+          'px-1 py-2',
+          'rounded-md',
+          'text-white-ka hover:text-cyan-ka'
+        )}
       >
         {children}
       </a>
