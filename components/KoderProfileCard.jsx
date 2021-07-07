@@ -23,7 +23,9 @@ export default function KoderProfileCard({ koder }) {
           'w-20'
       )}
         src={koder.image}
+        
       />
+      <i className='far fa-edit block text-center'></i>
     </div>
     <div className='pt-5 text-center'>
       <h3 className={classNames(

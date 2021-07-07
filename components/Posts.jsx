@@ -10,14 +10,17 @@ export default function Posts ({posts}) {
                 'text-white',
                 'min-h-full'
                 )}>
-                    <div className='bg- white w-full flex '>
+                    <div className='bg- white w-full flex'>
                         <ul>
                           {posts.map((post,index)=>(
                             <li className='flex'>
-                              <img className='mx-auto rounded-full w-20 'src={post.mentorImage}/>
-                              <div>
-                                <p className='flex items-start'>{post.postTitle}</p>
+                              <img className='mx-auto rounded-full w-10 h-10 'src={post.mentorImage}/>
+                              <div className='p-2'>
+                                <p className='flex items-start lg:text-xl'>{post.postTitle}</p>
                                 <p className=''>{post.postContent}</p>
+                                <i className='block far fa-heart text-3xl text-right'>
+                                  <small className='text-sm'>{post.likes}</small>
+                                </i>
                               </div>
                             </li>
                           )
