@@ -23,12 +23,12 @@
           "icon":"/icons/pre-bootcamp/pseudocodigo.svg"
         },
         {
-          "title":"Pensamiento estructurado",           
+          "title":"Diagramas de flujo",           
           "icon":"/icons/pre-bootcamp/diagrama-de-flujo.svg"
         },
         {
-          "title":"Pensamiento estructurado",           
-          "icon":"/icons/pre-bootcamp/diagrama-de-flujo.svg"
+          "title":"JS estructurado",           
+          "icon":"/icons/pre-bootcamp/js-estructurado.svg"
         }
         ]
 

@@ -10,20 +10,22 @@ export default function Posts ({posts}) {
     slidesToScroll: 1
   };
     return (
-        <div className='col-span-2 flex-grow-0'>
+        <div className='col-span-2 xs:col-span-1 flex-grow-0'>
             <div className={classNames(
                 'bg-black',
                 'py-5 px-5',
                 'rounded-lg',
+                'sm:mb-0.5',
                 'text-white',
-                'min-h-full'
+                'min-h-full',
+                'mb-0.5'
                 )}>
-                    <div className='bg- white w-full'>
+                    <div className='bg-dark w-full'>
                         <Slider {...settings}>
                           {posts.map((post,index)=>(
-                            <div>
+                            <div className=''>
                               <div className='flex'>
-                                <img className='mx-auto rounded-full w-10 h-10 'src={post.mentorImage}/>
+                                <img className='mx-auto rounded-full w-10 h-10 mt-3'src={post.mentorImage}/>
                                 <div className='p-2'>
                                   <p className='flex items-start lg:text-xl'>{post.postTitle}</p>
                                   <p className=''>{post.postContent}</p>
@@ -37,7 +39,6 @@ export default function Posts ({posts}) {
                           )}
                             
                         </Slider>
-
                     </div>
                 </div>
         </div>

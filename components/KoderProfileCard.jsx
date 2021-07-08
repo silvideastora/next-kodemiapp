@@ -2,16 +2,21 @@
 import classNames from 'classnames'
 
 export default function KoderProfileCard({ koder }) {
+
+  const changeProfile = (koder) => {
+    console.log(koder)
+  }
   return (
     <div className={classNames(
         'bg-black',
+        'mb-0.5',
         'py-6 px-4',
         'rounded-lg',
         'flex flex-col',
         'items-center justify-center',
         'text-white',
         'w-full',
-        'xs:mb-0.5'
+        'xs:hidden'
     )}>
     <div className={classNames(
       'mx-auto',
@@ -25,7 +30,7 @@ export default function KoderProfileCard({ koder }) {
         src={koder.image}
         
       />
-      <i className='far fa-edit block text-center'></i>
+      <i  onClick={(e) => changeProfile(koder)}  className='far fa-edit block text-center'></i>
     </div>
     <div className='pt-5 text-center'>
       <h3 className={classNames(
@@ -35,7 +40,7 @@ export default function KoderProfileCard({ koder }) {
         {koder.name} {koder.lastName}
       </h3>
         <span className='text-xs lg:text-base'>
-          <i className='fab fa-github mr-2' />
+          <i  className='fab fa-github mr-2' />
           @{koder.github}
         </span>
         <p>{koder.location}</p>

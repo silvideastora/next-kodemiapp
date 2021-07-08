@@ -16,7 +16,7 @@ export default function Home() {
       <div className='lg:col-span-2 sm:grid-col-1'>
         <Posts posts={posts}/>
       </div>
-      <div className='col-span-3'>
+      <div className='col-span-1 lg:col-span-3'>
         <ModuleBox modules={Modules}/>
       </div>
     </div>

@@ -15,7 +15,7 @@ export default function ModuleBox({modules}) {
   }
   return (
       <div className={classNames(
-        'grid grid-cols-3 sm:gap-4 xs:grid-cols-1'
+        'grid grid-cols-3 sm:gap-4 xs:grid-cols-1 '
         )}>
       <div >
             <div className={classNames(
@@ -38,7 +38,7 @@ export default function ModuleBox({modules}) {
                 </div>
             </div>
         </div>
-        <div className='col-span-2 flex-grow-0'>
+        <div className='col-span-2'>
           <div className= {classNames(
             'bg-black',
             'min-h-full',
@@ -47,8 +47,8 @@ export default function ModuleBox({modules}) {
             'text-white'
           )} >
             <p classNames='flex items-start' >Módulo {selectedModule.title}</p>
-            <div>
-              <ul className='grid grid-cols-6'>
+            <div className>
+              <ul className='grid lg:grid-cols-6 xs:grid-cols-1 sm:grid-cols-3 '>
                 {selectedModule.topics.map((topic, index) =>( 
                   <li onClick={(e) => displayResourceScreen(topic)} key={index} className='text-gray-inactive hover:text-cyan-kodemiapp'>
                     <img className='mx-auto w-20'src={topic.icon} alt={`${topic.icon}-icon`} />
