@@ -14,5 +14,8 @@
     }
     .slick-dots li button:before {
         color: white;
+        font-size: 20px;
+        
+        
     }
-  }
+}

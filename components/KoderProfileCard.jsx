@@ -1,11 +1,17 @@
 //import React from 'react'
 import classNames from 'classnames'
+import {useState} from 'react'
+import Modal from 'react-modal'
 
 export default function KoderProfileCard({ koder }) {
-
+  const [activeModal, setActiveModal] = useState (false)     
   const changeProfile = (koder) => {
-    console.log(koder)
+    setActiveModal (true)
   }
+  const closeModal = () => {
+    setActiveModal (false)
+  }
+
   return (
     <div className={classNames(
         'bg-black',
@@ -18,6 +24,21 @@ export default function KoderProfileCard({ koder }) {
         'w-full',
         'xs:hidden'
     )}>
+      <Modal
+        isOpen={activeModal}
+        className=' absolute bg-cyan-kodemiapp top-60 left-60 bottom-60 right-60'
+      >
+        <div>
+          <button onClick={closeModal}>close</button>
+          <form>
+            <input />
+            <button>tab navigation</button>
+            <button>stays</button>
+            <button>inside</button>
+            <button>the modal</button>
+          </form>
+        </div>
+      </Modal>
     <div className={classNames(
       'mx-auto',
       'mt-2'

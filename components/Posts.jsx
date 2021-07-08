@@ -7,12 +7,14 @@ export default function Posts ({posts}) {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    arrows: false
   };
     return (
         <div className='col-span-2 xs:col-span-1 flex-grow-0'>
             <div className={classNames(
                 'bg-black',
+                'pb-16',
                 'py-5 px-5',
                 'rounded-lg',
                 'sm:mb-0.5',
