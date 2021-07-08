@@ -8,14 +8,23 @@ module.exports = {
 
       },
       colors: {
-        'cyan-kodemiapp': {
-          DEFAULT:'#0fff'
+        'black-ka': {
+          DEFAULT:'#181818',
+          variant: '#0e0e0e'
         },
-        'gray-kodemiapp': {
-          DEFAULT:'#181818'
+        'cyan-ka': {
+          DEFAULT:'#0fff',
+          variant: '#07baba'
+        },
+        'gray-ka': {
+          DEFAULT:'#4e4e4e'
         },
         'gray-inactive': {
-          DEFAULT: '#4E4E4E'
+          DEFAULT: '#4E4E4E',
+          variant: '#828282'
+        },
+        'white-ka': {
+          DEFAULT: '#fbfbfb'
         }
       },
       screens: {

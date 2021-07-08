@@ -14,19 +14,23 @@ export default function KoderProfileCard({ koder }) {
 
   return (
     <div className={classNames(
-        'bg-black',
+        'bg-black-ka',
         'mb-0.5',
-        'py-6 px-4',
+        'px-4',
         'rounded-lg',
         'flex flex-col',
         'items-center justify-center',
-        'text-white',
+        'text-white-ka',
         'w-full',
         'xs:hidden'
     )}>
       <Modal
         isOpen={activeModal}
-        className=' absolute bg-cyan-kodemiapp top-60 left-60 bottom-60 right-60'
+        className= {classNames(
+          'absolute',
+          'bg-black-ka',
+          'left-60 bottom-60 right-60 top-60'
+        )}  
       >
         <div>
           <button onClick={closeModal}>close</button>
@@ -46,28 +50,45 @@ export default function KoderProfileCard({ koder }) {
       <img 
         className={classNames(
           'rounded-full',
-          'w-20'
+          'w-24'
       )}
-        src={koder.image}
-        
+        src={koder.image}   
       />
-      <i  onClick={(e) => changeProfile(koder)}  className='far fa-edit block text-center'></i>
+      <i onClick={(e) => changeProfile(koder)}  className={classNames(
+        'block',
+        'cursor-pointer',
+        'far fa-edit',
+        'hover:text-cyan-ka',
+        'mt-1',
+        'text-center'
+      )}>
+      </i>
     </div>
-    <div className='pt-5 text-center'>
+    <div className= {classNames(
+      'pt-5',
+      ' text-center')} >
       <h3 className={classNames(
         'font-medium',
-        'text-base lg:text-xl'
+        'lg:text-xl',
+        'text-base '
       )}>
         {koder.name} {koder.lastName}
       </h3>
-        <span className='text-xs lg:text-base'>
-          <i  className='fab fa-github mr-2' />
+        <span className={classNames(
+          'text-xs',
+          ' lg:text-base'
+        )}>
+          <i  className={classNames(
+            'fab fa-github',
+            ' mr-2' 
+          )}/>
           @{koder.github}
         </span>
         <p>{koder.location}</p>
         <p className={classNames(
-          'pt-4',
-          'text-cyan-kodemiapp'
+          'font-semibold',
+          'pt-0',
+          'text-cyan-ka'
         )}>
           Generación {koder.generation} 
         </p>

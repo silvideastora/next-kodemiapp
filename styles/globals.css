@@ -10,7 +10,7 @@
 
 @layer components {
     .slick-dots li.slick-active button:before {
-        @apply text-cyan-kodemiapp;
+        @apply text-cyan-ka;
     }
     .slick-dots li button:before {
         color: white;

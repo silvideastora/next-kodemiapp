@@ -7,6 +7,7 @@ import koder from '../config/koder.json'
 import Posts from '../components/Posts'
 import posts from '../config/posts.json'
 
+
 export default function Home() {
   return (
     <div className={classNames(

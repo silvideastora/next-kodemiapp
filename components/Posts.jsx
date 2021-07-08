@@ -1,4 +1,4 @@
-import classNames from 'classNames'
+import classNames from 'classnames'
 import Slider from "react-slick";
 
 export default function Posts ({posts}) {
@@ -11,35 +11,72 @@ export default function Posts ({posts}) {
     arrows: false
   };
     return (
-        <div className='col-span-2 xs:col-span-1 flex-grow-0'>
+        <div className={classNames(
+          'col-span-2 xs:col-span-1',
+          'flex-grow-0'
+        )}>
             <div className={classNames(
-                'bg-black',
+                'bg-black-ka',
+                'mb-0.5',
+                'min-h-full',
                 'pb-16',
                 'py-5 px-5',
                 'rounded-lg',
                 'sm:mb-0.5',
-                'text-white',
-                'min-h-full',
-                'mb-0.5'
+                'text-white-ka',
                 )}>
-                    <div className='bg-dark w-full'>
+                    <div className={classNames(
+                      'bg-black-ka',
+                      ' w-full'
+                      )}>
                         <Slider {...settings}>
                           {posts.map((post,index)=>(
                             <div className=''>
-                              <div className='flex'>
-                                <img className='mx-auto rounded-full w-10 h-10 mt-3'src={post.mentorImage}/>
-                                <div className='p-2'>
-                                  <p className='flex items-start lg:text-xl'>{post.postTitle}</p>
-                                  <p className=''>{post.postContent}</p>
-                                  <i className='block far fa-heart text-3xl text-right'>
-                                    <small className='text-sm'>{post.likes}</small>
+                              <div className={classNames('flex'
+                              )}>
+                                <img className={classNames(
+                                  'h-12',
+                                  'mr-2 mt-3 mx-auto',
+                                  'rounded-full',
+                                  'w-12 '
+                                  )} src={post.mentorImage}/>
+                                <div className={classNames(
+                                  'p-2 mr-1'
+                                  )}>
+                                  <h3 className={classNames(
+                                    'font-semibold ',
+                                    'flex items-start',
+                                    'lg:text-xl'
+                                    )}>{post.postTitle}
+                                  </h3>
+                                  <p className={classNames(
+                                    'mt-1 mr-1',
+                                    'font-thin',
+                                    ' text-sm '
+                                    )}>{post.postDate}
+                                  </p>
+                                  <p className={classNames(
+                                    'font-medium',
+                                    'mt-1'
+                                    )}>{post.postContent}
+                                  </p>
+                                  <i className={classNames(
+                                    'block',
+                                    'far fa-heart',
+                                    'mr-2 mt-2',
+                                    'stroke-current',
+                                    'text-3xl text-right text-cyan-ka'
+                                    )}>
+                                    <small className={classNames(
+                                      'text-xs'
+                                      )}>{post.likes}
+                                    </small>
                                   </i>
                                 </div>
                               </div>
                             </div>
                           )
                           )}
-                            
                         </Slider>
                     </div>
                 </div>
