@@ -30,7 +30,6 @@ export default function Navbar() {
             className={classNames('w-32 icon-hover')}
           />
           </a>
-          
         </Link>
       </div>
     </div>
