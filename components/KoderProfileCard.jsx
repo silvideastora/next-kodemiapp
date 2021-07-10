@@ -28,20 +28,78 @@ export default function KoderProfileCard({ koder }) {
         isOpen={activeModal}
         className= {classNames(
           'absolute',
-          'bg-black-ka',
-          'left-60 bottom-60 right-60 top-60'
+          'rounded-xl',
+          'bg-gray-ka',
+          'left-20  top-20',
+          'text-white-ka'
         )}  
       >
-        <div>
-          <button onClick={closeModal}>close</button>
+        <div className={classNames(
+          'max-w-xs',' p-10'
+          )}>
           <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </div>
+            <div className={classNames('mb-4')}>
+              <label classNameName={classNames(
+                'label-modal'
+                )} for='firstName'>
+                  Nombre
+              </label>
+              <input className={classNames('input-modal')}
+                id='username' type='text' placeholder='Nombre'/> 
+            </div>
+            <div className={classNames('mb-4')}>
+              <label className={classNames(
+                'label-modal'
+                )} for='lastName'>
+                  Apellido
+              </label>
+              <input className={classNames('input-modal')}
+               id='username' type='text' placeholder='Apellido'/> 
+            </div>
+            <div className={classNames('mb-4')}>
+              <label className={classNames(
+                'label-modal'
+                )} for='imagen'>
+                  Tu imagen
+              </label>
+              <input className={classNames(
+                'input-modal'
+                )} id="username" type="text" placeholder="Tu foto"/> 
+            </div>
+            <div className={classNames('mb-4')}>
+              <label className={classNames(
+                'label-modal')} for='text'>
+                  Github
+              </label>
+              <input className={classNames(
+                'input-modal'
+                )} id='github' type='text' placeholder='name@github.com'/>
+              <p className={classNames(
+                'text-white-ka text-xs'
+                )}>Ingresa tu github</p>
+            </div>
+            <div className={classNames(
+              'flex ',
+              'items-center',
+              'justify-between'
+              )}>
+              <button className={classNames(
+                'button-ka',
+                'hover:bg-cyan-ka'
+                )} type="button" >
+                Enviar
+              </button>
+              <a className={classNames(
+                'align-baseline', 
+                'inline-block',
+                'hover:text-cyan-ka',
+                'text-sm text-white-ka'
+                )} href="#" onClick={closeModal}>
+                Cancelar
+              </a>
+    </div>
+  </form>
+</div>
       </Modal>
     <div className={classNames(
       'mx-auto',

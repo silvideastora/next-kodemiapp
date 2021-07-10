@@ -3,9 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily: {
-        primary:[ 'mono', 'sans']
 
+      fontFamily:{
+        'Poppins': ['Poppins','sans-serif'],
+        'Poppins-medium': ['"Poppins-medium"', 'serif']
       },
       colors: {
         'black-ka': {

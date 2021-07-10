@@ -31,7 +31,7 @@ export default function Posts ({posts}) {
                       )}>
                         <Slider {...settings}>
                           {posts.map((post,index)=>(
-                            <div className=''>
+                            <div className='' key={index}>
                               <div className={classNames('flex'
                               )}>
                                 <img className={classNames(
@@ -44,7 +44,7 @@ export default function Posts ({posts}) {
                                   'p-2 mr-1'
                                   )}>
                                   <h3 className={classNames(
-                                    'font-semibold ',
+                                    '',
                                     'flex items-start',
                                     'lg:text-xl'
                                     )}>{post.postTitle}
