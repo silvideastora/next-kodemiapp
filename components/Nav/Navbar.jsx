@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
+import Burger from './Burger'
+
 
 export default function Navbar() {
   return (
@@ -31,6 +33,7 @@ export default function Navbar() {
           />
           </a>
         </Link>
+        <Burger/>
       </div>
     </div>
   );

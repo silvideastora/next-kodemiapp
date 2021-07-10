@@ -43,7 +43,7 @@ export default function Footer() {
           'justify-between',
           'border-t-2 border-white-ka'
         )}>
-          <p className='mt-3'>Kodemia<span>&copy</span> 2021. Todos los derechos reservados</p>
+          <p className='mt-3'>Kodemia<span>&copy;</span> 2021. Todos los derechos reservados</p>
           <p className='mt-3'>Aviso de Privacidad</p>
         </div>
         

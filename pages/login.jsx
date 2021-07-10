@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Nav/Navbar'
 import Link from 'next/link'
 import classNames from 'classnames'
 import { useForm } from 'react-hook-form'
@@ -33,7 +33,7 @@ export default function login() {
               'justify-center items-center',
               'bg-transparent'
             )}>
-              <form className='relative ' onSubmit={handleSubmit(onSubmit)}>
+              <form className='' onSubmit={handleSubmit(onSubmit)}>
                 <h2 className={classNames(
                   'block',
                   'text-center',
@@ -55,10 +55,11 @@ export default function login() {
                     'rounded-md',
                     'h-10',
                     'pl-4',
-                    'text-lg'
+                    'text-lg',
+                    'focus:border-cyan-ka-variant focus:ring-1 focus:ring-cyan-ka-variant focus:outline-none focus:bg-black'
                   )}
                 >
-                  <option value='koder'>Koder</option>
+                  <option value='koder' className='w-full'>Koder</option>
                   <option value='mentor'>Mentor</option>
                 </select>
                 {errors.name && (
@@ -74,7 +75,7 @@ export default function login() {
                   minLength: { value: 2, message: 'Minimo dos caracteres 2️⃣' },
                 })}
                   className={classNames(
-                    'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none focus:bg-black',
+                    'focus:border-cyan-ka-variant focus:ring-1 focus:ring-cyan-ka-variant focus:outline-none focus:bg-black',
                     'w-full text-lg py-1 pl-5',
                     'border-2 border-cyan-ka rounded-md bg-black-ka'
                   )}
@@ -95,7 +96,7 @@ export default function login() {
                   minLength: { value: 2, message: 'Minimo dos caracteres 2️⃣' },
                 })}
                   className={classNames(
-                    'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none',
+                    'focus:border-cyan-ka-variant focus:ring-1 focus:ring-cyan-ka-variant focus:outline-none focus:bg-black',
                     'w-full text-lg py-1 pl-5',
                     'border-2 border-cyan-ka rounded-md bg-black-ka'
                   )}
@@ -112,7 +113,9 @@ export default function login() {
                   className={classNames(
                     'mt-20 w-full h-10',
                     'flex items-center justify-center',
-                    'rounded-md bg-transparent text-white-ka border-2 border-cyan-ka',
+                    'rounded-md',
+                    'bg-transparent text-white-ka', 
+                    'border-2 border-cyan-ka',
                     'hover:bg-cyan-ka hover:text-black-ka'
                   )}
                   type='submit'

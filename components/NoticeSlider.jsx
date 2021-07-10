@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React, { Component } from 'react';
+import Slider from 'react-slick';
 import notices from '../config/notices.json'
 
 export default class Responsive extends Component {
@@ -41,10 +41,10 @@ export default class Responsive extends Component {
     return (
       <div>
         <h2> Responsive </h2>
-        <Slider {...settings} className="bg-cyan-ka w-full">
+        <Slider {...settings} className='bg-cyan-ka w-full'>
           {
             notices.map(( { title, generation, content  }, index ) => (
-              <div className="bg-cyan-ka w-full h-full" key={index}>
+              <div className='bg-cyan-ka w-full h-full' key={index}>
                 <h3>{title}</h3>
                 <h3>{generation}</h3>
                 <h3>{content}</h3>

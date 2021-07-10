@@ -1,8 +1,7 @@
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Nav/Navbar'
 import classNames from 'classnames'
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import Link from 'next/link'
 
 export default function notice() {
   const { register, handleSubmit, formState: { errors } } = useForm()
@@ -46,7 +45,6 @@ export default function notice() {
                   )}>_</span></h2>
               <form 
                 className={classNames(
-                  'relative ',
                   'lg:border-2 lg:border-gray-ka',
                   'rounded-md',
                   'p-0 lg:p-8'
