@@ -6,6 +6,9 @@ import Modules from '../config/modules.json'
 import koder from '../config/koder.json'
 import Posts from '../components/Posts'
 import posts from '../config/posts.json'
+import AdminProfileCard from '../components/AdminProfileCard'
+import admin from '../config/admin.json'
+
 
 
 export default function Home() {
@@ -20,7 +23,10 @@ export default function Home() {
       <div className='col-span-1 lg:col-span-3'>
         <ModuleBox modules={Modules}/>
       </div>
+      <AdminProfileCard admin={admin}/>
+    <div className='lg:col-span-2 sm:grid-col-1'>
+      <Posts posts={posts}/>
     </div>
-      
+    </div>  
   )
 }
