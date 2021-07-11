@@ -23,7 +23,7 @@ export default function AdminProfileCard ({admin}){
         )}
             src={admin.image}   
         />
-            <i onClick={(e) => changeProfile(admin)}  className={classNames(
+            {/*<i onClick={(e) => changeProfile(admin)}  className={classNames(
             'block',
             'cursor-pointer',
             'far fa-edit',
@@ -31,7 +31,7 @@ export default function AdminProfileCard ({admin}){
             'mt-1',
             'text-center'
             )}>
-        </i>
+            </i>*/}
         </div>
             <div className= {classNames(
             'pt-5',
