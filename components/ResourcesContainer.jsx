@@ -13,7 +13,8 @@ export default function ResourcesContainer({resources}) {
               'bg-black-ka',
               'block rounded-lg', 
               'p-20',
-              'relative cursor-pointer mb-1'
+              'relative cursor-pointer mb-1',
+              'text-white-ka'
               )}>
                 
               <div className={classNames(
@@ -34,7 +35,7 @@ export default function ResourcesContainer({resources}) {
               )}>
                 <p classNames={classNames(
                   'p-2',
-                  'text-white-ka'
+                  'text-cyan-ka'
                   )}>
                     CSS Básico
                 </p>
