@@ -59,15 +59,15 @@ export default function ModuleBox({modules}) {
             'text-white-ka',
             'text-medium'
           )} >
-            <p classNames={classNames(
-              'flex items-start',
-              ' font-semibold',
-              ' text-lg'
-              )}> Módulo {selectedModule.title}</p>
+            <span classNames={classNames(
+              'text-cyan-ka'
+              )}> 
+              Módulo: {selectedModule.title}</span>
+              <span className='border-b border-b-1 border-solid border-cyan-ka'></span>
             <div>
               <ul className={classNames(
                 'grid',
-                'xs:grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 '
+                'xs:grid-cols-1 sm:grid-cols-3 lg:grid-cols-6'
                 )}>
                 {selectedModule.topics.map((topic, index) =>( 
                   <li onClick={(e) => displayResourceScreen(topic)} key={index}

@@ -5,8 +5,7 @@ module.exports = {
     extend: {
 
       fontFamily:{
-        'Poppins': ['Poppins','sans-serif'],
-        'Poppins-medium': ['"Poppins-medium"', 'serif']
+        'sans': ['Poppins','Arial', 'sans-serif']
       },
       colors: {
         'black-ka': {
@@ -31,11 +30,11 @@ module.exports = {
       screens: {
         'xs': {'max': '640px', 'min': '350px'}
       }
+      
     },
   },
   variants: {
     extend: {
-      
     },
   },
   plugins: [],
