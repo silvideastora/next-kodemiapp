@@ -2,12 +2,10 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily:{
+      'body':['Poppins','sans-serif'] 
+    },
     extend: {
-
-      fontFamily:{
-        'Poppins': ['Poppins','sans-serif'],
-        'Poppins-medium': ['"Poppins-medium"', 'serif']
-      },
       colors: {
         'black-ka': {
           DEFAULT:'#181818',

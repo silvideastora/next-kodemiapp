@@ -32,7 +32,8 @@ export default function Posts ({posts}) {
                         <Slider {...settings}>
                           {posts.map((post,index)=>(
                             <div className='' key={index}>
-                              <div className={classNames('flex'
+                              <div className={classNames(
+                                'flex'
                               )}>
                                 <img className={classNames(
                                   'h-12',
@@ -44,20 +45,19 @@ export default function Posts ({posts}) {
                                   'p-2 mr-1'
                                   )}>
                                   <h3 className={classNames(
-                                    '',
                                     'flex items-start',
-                                    'lg:text-xl'
+                                    'lg:text-xl font-semibold'
                                     )}>{post.postTitle}
                                   </h3>
                                   <p className={classNames(
                                     'mt-1 mr-1',
-                                    'font-thin',
+                                    'font-light',
                                     ' text-sm '
                                     )}>{post.postDate}
                                   </p>
                                   <p className={classNames(
-                                    'font-medium',
-                                    'mt-1'
+                                    'font-normal',
+                                    'mt-2'
                                     )}>{post.postContent}
                                   </p>
                                   <i className={classNames(
@@ -65,12 +65,12 @@ export default function Posts ({posts}) {
                                     'far fa-heart',
                                     'mr-2 mt-2',
                                     'stroke-current',
-                                    'text-3xl text-right text-cyan-ka'
+                                    'text-2xl text-right text-cyan-ka'
                                     )}>
-                                    <small className={classNames(
+                                    <span className={classNames(
                                       'text-xs'
                                       )}>{post.likes}
-                                    </small>
+                                    </span>
                                   </i>
                                 </div>
                               </div>
