@@ -3,6 +3,7 @@ import Nav from './Nav'
 import NavItem from './NavItem'
 import classNames from 'classnames'
 import FooterIcons from './FooterIcons'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -18,17 +19,27 @@ export default function Footer() {
         />
         <div>
           <Nav>
-            <NavItem href='/https://kodemia.mx/#bootcamps'>
-              Programas
+            <NavItem>
+              <Link href='https://kodemia.mx/#bootcamps' target='_blank'>
+                <a>Programas</a>
+              </Link>
             </NavItem>
-            <NavItem href='/featured'>
-              |
-            </NavItem>
-            <NavItem href='/https://kodemia.mx/empresas'>Empresas</NavItem>
             <NavItem href='/#'>
               |
             </NavItem>
-            <NavItem href='/https://kodemia.mx/login'>Alumnos </NavItem>
+            <NavItem>
+              <Link href='https://kodemia.mx/empresas' target='_blank'>
+                <a>Empresas</a>
+              </Link>
+            </NavItem>
+            <NavItem href='/#'>
+              |
+            </NavItem>
+            <NavItem>
+              <Link href='https://kodemia.mx/login' target='_blank'>
+                <a>Alumnos</a>
+              </Link>
+            </NavItem>
           </Nav>
         </div>
         <div>
@@ -44,7 +55,9 @@ export default function Footer() {
           'border-t-2 border-white-ka'
         )}>
           <p className='mt-3'>Kodemia<span>&copy;</span> 2021. Todos los derechos reservados</p>
-          <p className='mt-3'>Aviso de Privacidad</p>
+          <Link href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'>
+            <a className='mt-3'>Aviso de Privacidad</a>
+          </Link>
         </div>
         
       </div>

@@ -4,8 +4,7 @@ import classNames from 'classnames'
 import Burger from './Burger'
 
 
-export default function Navbar( {hamburger = true} ) {
-  console.log(hamburger)
+export default function Navbar( {hamburger = false} ) {
   return (
     <nav
       className={classNames(
