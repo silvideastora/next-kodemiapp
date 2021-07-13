@@ -4,9 +4,10 @@ import classNames from 'classnames'
 import Burger from './Burger'
 
 
-export default function Navbar() {
+export default function Navbar( {hamburger = true} ) {
+  console.log(hamburger)
   return (
-    <div
+    <nav
       className={classNames(
         'bg-black-ka bg-opacity-25',
         'flex', 
@@ -33,8 +34,15 @@ export default function Navbar() {
           />
           </a>
         </Link>
-        <Burger/>
+        {
+          hamburger && ( <>
+            <Burger/>
+            </> )
+        }
+        
+        
+        
       </div>
-    </div>
+    </nav>
   );
 }
