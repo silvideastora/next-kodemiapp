@@ -1,0 +1,31 @@
+[
+  {
+    "name": "facebook",
+    "location": "/icons/social/facebook-icon.svg",
+    "route": "https://www.facebook.com/kodemiamx"
+  },{
+    "name": "instagram",
+    "location": "/icons/social/instagram-icon.svg",
+    "route": "https://www.instagram.com/kodemiamx/"
+  },{
+    "name": "twitter",
+    "location": "/icons/social/twitter-icon.svg",
+    "route": "https://twitter.com/kodemiamx"
+  },{
+    "name": "github",
+    "location": "/icons/social/github-icon.svg",
+    "route": "https://github.com/kodemia"
+  },{
+    "name": "medium",
+    "location": "/icons/social/medium-icon.svg",
+    "route": "https://medium.com/kodemia"
+  },{
+    "name": "youtube",
+    "location": "/icons/social/youtube-icon.svg",
+    "route": "https://www.youtube.com/channel/UCjCo9gdMQdebs95zcufryaQ"
+  },{
+    "name": "linkedin",
+    "location": "/icons/social/linkedin-icon.svg",
+    "route": "https://www.linkedin.com/company/kodemiamx/"
+  }
+]

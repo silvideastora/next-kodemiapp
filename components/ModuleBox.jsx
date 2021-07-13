@@ -62,7 +62,7 @@ export default function ModuleBox({modules}) {
             'text-medium'
             
           )} >
-            <p classNames={classNames(
+            <p className={classNames(
               'flex items-start'
               )}> Módulo {selectedModule.title}</p>
             <div>

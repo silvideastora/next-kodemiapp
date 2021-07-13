@@ -3,11 +3,11 @@ import classNames from 'classnames'
 export default function ResourcesContainer({resources}) {
     return (
       <div>
-        <ul class={classNames(
+        <ul className={classNames(
           'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'
         )}>
           {resources.map((resource, index) => (
-          <li>
+          <li key={index}>
             <a  className={classNames(
               'bg-black',
               'block rounded-lg', 

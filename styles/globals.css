@@ -6,23 +6,24 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
 
+.icon-hover:hover {
+  filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%)
+}
 
 @layer components {
   .slick-dots li.slick-active button:before {
-      @apply text-cyan-ka;
+    @apply text-cyan-ka;
   }
   .slick-dots li button:before {
     color: white;
-    font-size: 20px;
-        
-        
+    font-size: 20px;    
   }
 }
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
 
 .label-modal{
   display: block;
