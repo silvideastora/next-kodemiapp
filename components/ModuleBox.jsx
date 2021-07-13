@@ -25,7 +25,8 @@ export default function ModuleBox({modules}) {
             'mb-0.5',
             'py-6',
             'shadow-xl rounded-lg',
-            'text-white'
+            'text-white',
+            'font-semibold'
             )}>
               <div className={classNames(
                 'p-2'
@@ -35,7 +36,7 @@ export default function ModuleBox({modules}) {
                       <li onClick={(e) => changeModule(module)} key={index} className={classNames(
                         'block text-xl text-center',
                         'cursor-pointer',
-                        'font-medium',
+                        'font-semibold',
                         'hover:text-cyan-ka',
                         'px-2 py-2',
                         'text-xl',
@@ -57,12 +58,12 @@ export default function ModuleBox({modules}) {
             'py-5 px-5', 
             'rounded-lg',
             'text-white-ka',
-            'text-medium'
+            'text-bold'
           )} >
             <p classNames={classNames(
               'flex items-start',
-              ' font-semibold',
-              ' text-lg'
+              'font-semibold'
+        
               )}> Módulo {selectedModule.title}</p>
             <div>
               <ul className={classNames(
