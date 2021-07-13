@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Titulo de aviso 1",
+    "generation": "Javascript generacion 11",
+    "content": "Contenido del aviso 1..."
+  },{
+    "title": "Titulo de aviso 2",
+    "generation": "Javascript generacion 12",
+    "content": "Contenido del aviso 2..."
+  },{
+    "title": "Titulo de aviso 3",
+    "generation": "Python generacion 1",
+    "content": "Contenido del aviso 3..."
+  },{
+    "title": "Titulo de aviso 4",
+    "generation": "Python generacion 2",
+    "content": "Contenido del aviso 4..."
+  },{
+    "title": "Titulo de aviso 5",
+    "generation": "Javascript generacion 2",
+    "content": "Contenido del aviso 5..."
+  },{
+    "title": "Titulo de aviso 6",
+    "generation": "Javascript generacion 2",
+    "content": "Contenido del aviso 6..."
+  }
+]
