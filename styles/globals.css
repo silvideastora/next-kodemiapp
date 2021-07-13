@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer components {
+  .slick-dots li.slick-active button:before {
+      @apply text-cyan-ka;
+  }
+  .slick-dots li button:before {
+    color: white;
+    font-size: 20px;
+        
+        
+  }
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.label-modal{
+  display: block;
+  color: white;
+	font-size: 0.875rem;
+	font-weight:700;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-modal{
+  appearance: none;
+  background-color:#181818;
+  border-radius: 0.5rem;
+  color: rgba(209, 213, 219, var(--tw-text-opacity));
+  line-height: 1.25;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
+}
+.button-ka{
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: #00FFFF;
+  color: #FBFBFB;
+  padding: 1.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
