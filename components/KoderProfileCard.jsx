@@ -54,7 +54,7 @@ export default function KoderProfileCard({ koder }) {
                   Apellido
               </label>
               <input className={classNames('input-modal')}
-               id='username' type='text' placeholder='Apellido'/> 
+                id='username' type='text' placeholder='Apellido'/> 
             </div>
             <div className={classNames('mb-4')}>
               <label className={classNames(
@@ -69,7 +69,7 @@ export default function KoderProfileCard({ koder }) {
             <div className={classNames('mb-4')}>
               <label className={classNames(
                 'label-modal')} for='text'>
-                  Github
+                Github
               </label>
               <input className={classNames(
                 'input-modal'
