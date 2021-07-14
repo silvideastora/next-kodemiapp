@@ -3,12 +3,12 @@ import Navbar from '../components/Nav/Navbar'
 import Footer from '../components/Footer'
 import Link from 'next/link'
 import classNames from 'classnames'
+import Layout from '../components/Layout'
 
 export default function Home() {
   return (
-    <>
+    <Layout>
       <section className='bg-black-ka-variant'>
-        <Navbar />
         <div className={classNames(
           'container',
           'mx-auto', 
@@ -41,9 +41,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className='bg-black-ka-variant'>
-        <Footer />
-      </div>
-    </>
+    </Layout>
   )
 }
