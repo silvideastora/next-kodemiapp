@@ -1,6 +1,4 @@
 
-import Navbar from '../components/Nav/Navbar'
-import Footer from '../components/Footer'
 import Link from 'next/link'
 import classNames from 'classnames'
 import Layout from '../components/Layout'
@@ -10,8 +8,6 @@ export default function Home() {
     <Layout>
       <section className='bg-black-ka-variant'>
         <div className={classNames(
-          'container',
-          'mx-auto', 
           'h-screen',
           'flex',
           'items-center',
@@ -31,7 +27,8 @@ export default function Home() {
                   'mt-6 w-full md:w-1/2 h-10',
                   'flex',
                   'items-center justify-center',
-                  'rounded-md bg-transparent hover:bg-acua-ka text-white-ka border-2 border-cyan-ka'
+                  'rounded-md bg-transparent text-white-ka border-2 border-cyan-ka',
+                  'hover:bg-cyan-ka hover:text-black-ka hover:font-bold'
                 )}
                 type='submit'
               >
