@@ -10,8 +10,8 @@ import posts from '../config/posts.json'
 
 export default function Home() {
   return (
-    <div className='container bg-black-ka'>
-      <div className='container h-auto bg-black'>
+    <div className='container bg-black'>
+      <div className='container h-auto bg-black xs:hidden'>
       <img className='object-cover h-auto w-full opacity-50' src='../images/banner.jpg'/>
       </div>
       <div className={classNames(

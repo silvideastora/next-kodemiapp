@@ -16,6 +16,7 @@ export default function KoderProfileCard({ koder }) {
     
       <div className={classNames(
         'bg-black-ka',
+        'border border-white-ka',
         'mb-0.5',
         'px-4',
         'py-2',

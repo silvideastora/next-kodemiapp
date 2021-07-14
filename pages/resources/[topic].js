@@ -10,7 +10,7 @@ export default function ResourcesScreen () {
 		.then(data => setResources(data.resources));
 	},[])
     return (
-        <div className='flex-wrap p-12 grid grid-cols-auto gap-4'>
+        <div className='flex-wrap h-full grid grid-cols-auto gap-4'>
         <ResourcesContainer resources={resources}/>    
     </div>
     )
