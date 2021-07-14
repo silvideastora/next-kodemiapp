@@ -13,10 +13,12 @@ export default function KoderProfileCard({ koder }) {
   }
 
   return (
-    <div className={classNames(
+    
+      <div className={classNames(
         'bg-black-ka',
         'mb-0.5',
         'px-4',
+        'py-2',
         'rounded-lg',
         'flex flex-col',
         'items-center justify-center',
@@ -30,6 +32,7 @@ export default function KoderProfileCard({ koder }) {
           'absolute',
           'rounded-xl',
           'bg-gray-ka',
+          'flex-grow',
           'left-20  top-20',
           'text-white-ka'
         )}  
@@ -152,5 +155,6 @@ export default function KoderProfileCard({ koder }) {
         </p>
     </div>
 </div>
+
 )
 }

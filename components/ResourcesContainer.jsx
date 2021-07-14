@@ -2,7 +2,7 @@ import classNames from 'classnames'
 
 export default function ResourcesContainer({resources}) {
     return (
-      <div>
+      <div className='container'>
         <ul className={classNames(
           'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'
         )}>
