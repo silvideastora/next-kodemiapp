@@ -1,9 +1,14 @@
 import { useRouter } from 'next/router'
 import ResourcesContainer from '../../components/ResourcesContainer'
-import resources from '../../config/resources.json'
+import {useState, useEffect} from 'react'
 
 export default function ResourcesScreen () {
-    const router = useRouter ()
+	const [resources, setResources] = useState([])
+  useEffect(() => {
+		fetch('https://private-b1ad8a-oportunos1.apiary-mock.com/resources')
+		.then(response => response.json())
+		.then(data => setResources(data.resources));
+	},[])
     return (
         <div className='flex-wrap p-12 grid grid-cols-auto gap-4'>
         <ResourcesContainer resources={resources}/>    

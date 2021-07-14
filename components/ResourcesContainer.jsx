@@ -6,7 +6,9 @@ export default function ResourcesContainer({resources}) {
         <ul className={classNames(
           'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'
         )}>
-          {resources.map((resource, index) => (
+          {
+          
+          resources.map((resource, index) => (
           <li key={index}>
             <a  className={classNames(
               'bg-black',
@@ -21,15 +23,15 @@ export default function ResourcesContainer({resources}) {
                 'items-center'
               )}>
                 <div>
-                  <dt>CSS básico y selectores</dt>
-                  <dd className={classNames(
+                  <dt>{resource.title}</dt>
+                  <a href={resource.url} className={classNames(
                     'font-medium',
                     'group-hover:text-white-ka',
                     'leading-8',
                     'text-gray-inactive'
                   )}>
-                    item o recursos
-                  </dd>
+                    {resource.url}
+                  </a>
                 </div>
               </dl>
             </a>
