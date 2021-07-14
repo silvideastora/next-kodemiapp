@@ -2,7 +2,7 @@ import Navbar from '../components/Nav/Navbar'
 import classNames from 'classnames'
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import ListKoders from '../components/ListKoders/ListKoders'
+import ListKodersNames from '../components/ListKoders/ListKodersNames'
 
 export default function notice() {
   const { register, handleSubmit, formState: { errors } } = useForm()
@@ -139,7 +139,7 @@ export default function notice() {
               )}>
               </div>
               <div>
-                <ListKoders/>
+                <ListKodersNames/>
               </div>
             </div>
           </div>

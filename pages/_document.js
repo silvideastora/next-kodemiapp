@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <Head>
           <title>Kodemiapp</title>
           <meta name='description' content='Kodemiapp' />
-          <link rel='icon' href='/favicon.ico' />
+          <link rel='icon' href='../static/favicon.ico' />
           <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css'></link>
         </Head>
         <body className='bg-black-ka-variant'>
