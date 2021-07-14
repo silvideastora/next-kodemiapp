@@ -31,9 +31,8 @@ export default function Posts ({posts}) {
                       )}>
                         <Slider {...settings}>
                           {posts.map((post,index)=>(
-                            <div className='' key={index}>
-                              <div className={classNames(
-                                'flex'
+                            <div key={index} className=''>
+                              <div className={classNames('flex'
                               )}>
                                 <img className={classNames(
                                   'h-12',
