@@ -17,6 +17,7 @@ export default function Posts ({posts}) {
         )}>
             <div className={classNames(
                 'bg-black-ka',
+                'border border-white-ka',
                 'mb-0.5',
                 'min-h-full',
                 'pb-16',
@@ -31,9 +32,8 @@ export default function Posts ({posts}) {
                       )}>
                         <Slider {...settings}>
                           {posts.map((post,index)=>(
-                            <div className='' key={index}>
-                              <div className={classNames(
-                                'flex'
+                            <div key={index}>
+                              <div className={classNames('flex'
                               )}>
                                 <img className={classNames(
                                   'h-12',
