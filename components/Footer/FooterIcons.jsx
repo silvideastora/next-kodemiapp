@@ -1,5 +1,5 @@
 
-import icons from '../config/FooterIcons.json'
+import icons from '../../config/FooterIcons.json'
 import classNames from 'classnames'
 import React from 'react'
 

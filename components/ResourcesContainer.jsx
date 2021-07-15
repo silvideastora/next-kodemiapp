@@ -4,10 +4,10 @@ export default function ResourcesContainer({resources}) {
     return (
       <div className='container'>
         <div className='container bg-black xs:hidden'>
-          <img className='object-cover w-full opacity-50' src='../images/banner.jpg'/>
+          <img className='object-cover w-full opacity-50' src='../images/banner-ka.jpeg'/>
         </div>
         <ul className={classNames(
-            'bg-black-ka',
+            'bg-black',
             'gap-4',
             'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-12'
           )}>
@@ -44,7 +44,7 @@ export default function ResourcesContainer({resources}) {
                       'pt-16'
                     )}>
                       {resource.title}</h3>
-                    <a href={resource.url} className={classNames(
+                    <a href={resource.url} target='_blank'className={classNames(
                       'px-12',
                       'p-10',
                       'w-full',

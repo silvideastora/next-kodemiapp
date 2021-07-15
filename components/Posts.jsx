@@ -61,7 +61,7 @@ export default function Posts ({posts}) {
                       )}>
                         <Slider {...settings}>
                           {posts.map((post,index)=>(
-                            <div key={index} className=''>
+                            <div key={index}>
                               <div className={classNames('flex'
                               )}>
                                 <img className={classNames(

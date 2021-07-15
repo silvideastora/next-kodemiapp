@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 export default function ResourcesScreen () {
 	const [resources, setResources] = useState([])
   useEffect(() => {
-		fetch('https://private-b1ad8a-oportunos1.apiary-mock.com/resources')
+		fetch('http://kodemiaappback-chatty-bandicoot-kf.mybluemix.net/koders/60dfce7b5a54fc3f5c716090')
 		.then(response => response.json())
 		.then(data => setResources(data.resources));
 	},[])
