@@ -12,12 +12,15 @@ export default function login() {
 
 
   const onSubmit = async (data, e) => {
-    localStorage.setItem(data.token, data.typeUser)
+    
     if(data.typeUser === 'koder'){
       console.log(data)
       e.target.reset();
       const loginKoder = await KoderLogin(data)
       console.log(loginKoder)
+      console.log(loginKoder.data.token)
+      localStorage.setItem( 'typeUser', loginKoder.message)
+      localStorage.setItem( 'token', loginKoder.data.token)
       Router.push('dashboard')
     } else {
       console.log(data)
