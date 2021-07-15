@@ -2,6 +2,7 @@ import Navbar from '../components/Nav/Navbar'
 import classNames from 'classnames'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import ListKodersNames from '../components/ListKoders/ListKodersNames'
 
 export default function notice() {
   const { register, handleSubmit, formState: { errors } } = useForm()
@@ -136,6 +137,9 @@ export default function notice() {
               'justify-center items-center',
               'bg-transparent'
               )}>
+              </div>
+              <div>
+                <ListKodersNames/>
               </div>
             </div>
           </div>
