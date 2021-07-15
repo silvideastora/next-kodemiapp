@@ -2,15 +2,14 @@ import { useRouter } from 'next/dist/client/router'
 import nProgress from 'nprogress'
 import React, { useEffect } from 'react'
 import Navbar from './Nav/Navbar'
-import Footer from './Footer'
+import Footer from './Footer/Footer'
 
-export default function Layout({children}) {
+export default function Layout({children, footer = true}) {
   
   const router = useRouter()
 
   useEffect(() => {
     const handleRouteChange = url => {
-      console.log(url)
       nProgress.start()
     }
 
@@ -26,8 +25,11 @@ export default function Layout({children}) {
   return (
     <>
       <Navbar/>
-      <main className='bg-black-ka-variant py-4'>{children}</main>
-      <Footer/>
+      <main className='container mx-auto'>{children}</main>
+      {
+        footer && (<Footer/>)
+      }
+      
     </>
   )
 }

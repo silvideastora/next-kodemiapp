@@ -3,6 +3,7 @@ import Navbar from '../components/Nav/Navbar'
 import Link from 'next/link'
 import classNames from 'classnames'
 import { useForm } from 'react-hook-form'
+import Layout from '../components/Layout'
 import { KoderLogin, MentorLogin } from '../lib/api'
 import Router from 'next/router'
 
@@ -31,11 +32,9 @@ export default function login() {
   };
 
   return (
-    <>
+    <Layout footer={false}>
       <section className='bg-black-ka-variant'>
-        <Navbar />
         <div className={classNames(
-          'container',
           'flex',
           'justify-center items-center',
           'h-screen',
@@ -152,6 +151,6 @@ export default function login() {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   );
 }
