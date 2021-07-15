@@ -10,7 +10,7 @@ export default function KoderProfileForm ({closeModal}) {
             method:'PATCH',
             body: JSON.stringify(data),
             mode: 'cors',
-            headers: {
+            	headers: {
 								'Access-Control-Allow-Origin':'*',
 								'Authorization':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZGZjZTdiNWE1NGZjM2Y1YzcxNjA5MCIsImlhdCI6MTYyNjMxNDczN30.UxKTGdsGwB-HJWvP5NqZjiewJqS-4Lya06cbe9ZkBYU'
               } 
