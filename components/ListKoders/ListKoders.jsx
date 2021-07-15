@@ -9,9 +9,8 @@ export default function ListKoders({firstName, lastName}) {
     <div className='flex justify-between'>
       <li className={classNames(
       {'text-gray-inactive': checked},
-    )}>
-      {firstName} {lastName}
-      
+      )}>
+        {firstName} {lastName}
       </li>
       <label className='switch '>
         <input type='checkbox' onClick={() => setChecked(!checked)} />
