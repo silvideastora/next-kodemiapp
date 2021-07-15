@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Nav/Navbar'
 import Link from 'next/link'
 import classNames from 'classnames'
 import { useForm } from 'react-hook-form'
@@ -7,28 +6,28 @@ import Layout from '../components/Layout'
 import { KoderLogin, MentorLogin } from '../lib/api'
 import Router from 'next/router'
 
-
 export default function login() {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
 
   const onSubmit = async (data, e) => {
+    
     if(data.typeUser === 'koder'){
       console.log(data)
       e.target.reset();
       const loginKoder = await KoderLogin(data)
       console.log(loginKoder)
-      //Guardar token en local storage con use efect verificar si existe token, si no existe token redireccionar a login
+      console.log(loginKoder.data.token)
+      localStorage.setItem( 'typeUser', loginKoder.message)
+      localStorage.setItem( 'token', loginKoder.data.token)
       Router.push('dashboard')
     } else {
       console.log(data)
       e.target.reset();
       const loginMentor = await MentorLogin(data)
       console.log(loginMentor)
-    }
-    
-    
+    } 
   };
 
   return (
@@ -64,7 +63,7 @@ export default function login() {
                   )}>_</span></h2>
                 <select {...register('typeUser', {
                   required: { value: true, message: 'Campo obligatorio...😣' }
-                })}
+                  })}
                   className={classNames(
                     'w-full',
                     'bg-black-ka',

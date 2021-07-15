@@ -1,4 +1,4 @@
-import Head from 'next/head'
+
 import classNames from 'classnames';
 import KoderProfileCard from '../components/KoderProfileCard'
 import ModuleBox from '../components/ModuleBox'
@@ -7,9 +7,21 @@ import koder from '../config/koder.json'
 import Posts from '../components/Posts'
 import posts from '../config/posts.json'
 import Layout from '../components/Layout'
+import Router from 'next/router'
+import { useEffect } from 'react';
 
+export default function Dashboard() {
 
-export default function Home() {
+  useEffect(() => {
+    if( typeof window !== 'undefined' ){
+      const token = window.localStorage.getItem('token')
+      const typeUser = window.localStorage.getItem('typeUser')
+      if ( !token && typeUser !== 'Koder logged'){
+        Router.push('login')
+      }
+    }
+  }, [])
+
   return (
     <Layout footer={false}>
       <div className='container bg-black'>
