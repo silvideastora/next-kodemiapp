@@ -7,7 +7,7 @@ import Posts from '../components/Posts'
 import posts from '../config/posts.json'
 
 
-export default function Home() {
+export default function AdminBoard() {
     return (
     <div className='container bg-black'>
     <div className='container h-auto bg-black xs:hidden'>
