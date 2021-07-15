@@ -55,6 +55,7 @@ export default function ModuleBox({modules}) {
           )}>
           <div className= {classNames(
             'bg-black-ka',
+            'border border-white-ka',
             'min-h-full',
             'p-2',
             'py-5 px-5', 

@@ -44,7 +44,7 @@ export default function ResourcesContainer({resources}) {
                       'pt-16'
                     )}>
                       {resource.title}</h3>
-                    <a href={resource.url} className={classNames(
+                    <a href={resource.url} target='_blank'className={classNames(
                       'px-12',
                       'p-10',
                       'w-full',

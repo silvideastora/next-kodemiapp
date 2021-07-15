@@ -17,6 +17,7 @@ export default function Posts ({posts}) {
         )}>
             <div className={classNames(
                 'bg-black-ka',
+                'border border-white-ka',
                 'mb-0.5',
                 'min-h-full',
                 'pb-16',
