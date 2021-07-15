@@ -22,6 +22,7 @@ export default function ModuleBox({modules}) {
       <div>
             <div className={classNames(
             'bg-black-ka',
+            'border border-white-ka',
             'mb-0.5',
             'py-6',
             'shadow-xl rounded-lg',
@@ -54,6 +55,7 @@ export default function ModuleBox({modules}) {
           )}>
           <div className= {classNames(
             'bg-black-ka',
+            'border border-white-ka',
             'min-h-full',
             'p-2',
             'py-5 px-5', 
