@@ -8,7 +8,7 @@ import Posts from '../components/Posts'
 import posts from '../config/posts.json'
 import Layout from '../components/Layout'
 import Router from 'next/router'
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 export default function Dashboard() {
 
