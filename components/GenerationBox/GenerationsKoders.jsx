@@ -9,7 +9,7 @@ const GenerationsKoders = () => {
 
   const [ kodersData, setKodersData ] = useState([])
   const [ generationData, setGenerationData ] = useState([])
-  const [ selectedGeneration, setSelectedGeneration ] = useState(10)
+  const [ selectedGeneration, setSelectedGeneration ] = useState(11)
 
   useEffect( async () => {
     const generation = await getGenerationByStatus()
@@ -31,12 +31,12 @@ const GenerationsKoders = () => {
     <>
     <div className={classNames(
       'grid grid-cols-3',
-      'lg:gap-4 sm:gap-1',
+      'sm:gap-2 lg:gap-8',
       'xs:grid-cols-1',
       'mt-6'
     )}>
       <div>
-        <h3>Generaciones</h3>
+        <h3 className='mb-2'>Generaciones</h3>
         <div className={classNames(
           'bg-black-ka',
           'border border-white-ka',
@@ -50,11 +50,15 @@ const GenerationsKoders = () => {
           <div className={classNames(
             'p-2'
           )}>
-            <div>
+            <div className='text-center'>
               <ul>
                 {
                   generationData.map(({generationNumber, bootCamp}, index ) => (
-                    <li key={index} onClick={() => handleOnClick(generationNumber)}>
+                    <li
+                      className='cursor-pointer my-10 hover:text-cyan-ka'
+                      key={index}
+                      onClick={() => handleOnClick(generationNumber)}
+                    >
                       {`Generacion ${generationNumber} ${bootCamp}`}
                     </li>
                   ))
@@ -65,7 +69,7 @@ const GenerationsKoders = () => {
         </div>
       </div>
       <div className='col-span-2'>
-        <h3>Koders</h3>
+        <h3 className='mb-2'>Koders</h3>
 
         <div className={classNames(
           'bg-black-ka',

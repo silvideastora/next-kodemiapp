@@ -19,12 +19,11 @@ export default function ModuleBox({ modules }) {
     router.push(`/resources/${topic.title}`)
   }
   return (
-
-
     <div className={classNames(
       'grid grid-cols-3',
       'sm:gap-2 lg:gap-8',
-      'xs:grid-cols-1 '
+      'xs:grid-cols-1 ',
+      'mt-6'
     )}>
       <div>
         <h3 className='mb-2'>Módulos</h3>

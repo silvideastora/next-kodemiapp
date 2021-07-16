@@ -26,11 +26,11 @@ export default function AdminBoard() {
     const postsResponse = await GetPosts({
       generation: {
         bootcamp: 'JS',
-        number: generationNumber
+        number: parseInt(generationNumber)
       },
     })
     setPosts(postsResponse.data)
-    console.log(generationNumber, postsResponse.data )
+    console.log('numero de generacion:', generationNumber, postsResponse.data )
   }, [])
 
   return (

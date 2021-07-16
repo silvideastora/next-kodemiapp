@@ -5,10 +5,9 @@ import Modal from 'react-modal'
 import Notice from './Notice'
 import { GetPosts, like } from '../lib/api'
 
-
 export default function Posts({ posts, isAdmin }) {
+  console.log('POSTS:', posts)
   const [activeModal, setActiveModal] = useState(false)
-
 
   const settings = {
     dots: true,
@@ -17,7 +16,8 @@ export default function Posts({ posts, isAdmin }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false
-  };
+  }
+
   const closeModal = () => {
     setActiveModal(false)
 
@@ -25,7 +25,6 @@ export default function Posts({ posts, isAdmin }) {
   const increaseLike = async (id) => {
     const token = window.localStorage.getItem('token')
     const response = await like(id, token)
-
 
   }
   return (
@@ -74,7 +73,7 @@ export default function Posts({ posts, isAdmin }) {
             <Slider {...settings}
             >
               {posts.map((post, index) => (
-                <div key={index}>
+                <div key={`post-${index}`}>
                   <div className={classNames('flex'
                   )}>
                     <img className={classNames(
