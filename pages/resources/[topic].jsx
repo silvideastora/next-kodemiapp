@@ -1,29 +1,33 @@
-import { useRouter } from 'next/router'
+
 import ResourcesContainer from '../../components/ResourcesContainer'
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { getResources } from '../../lib/api'
+import Layout from '../../components/Layout'
 
-export default function ResourcesScreen () {
+export default function ResourcesScreen() {
+  const router = useRouter()
+  const [resources, setResources] = useState([])
 
-  useEffect(() => {
-    if( typeof window !== 'undefined'){
+  useEffect(async () => {
+
+    const module = router.query.topic
+    const moduleResources = await getResources(module)
+    setResources(moduleResources.data)
+    if (typeof window !== 'undefined') {
       const token = window.localStorage.getItem('token')
-      if( !token ) {
+      if (!token) {
         Router.push('login')
       }
     }
   }, [])
 
-	const [resources, setResources] = useState([])
-  useEffect(() => {
-		fetch('http://kodemiaappback-chatty-bandicoot-kf.mybluemix.net/resources/byModule')
-		.then(response => response.json())
-		.then(data => setResources(data.resources));
-	},[])
-
   return (
-    <div className='flex-wrap h-full grid grid-cols-auto gap-4'>
-      <ResourcesContainer resources={resources}/>    
-    </div>
+    <Layout footer={false}>
+      <div className='flex-wrap h-full grid grid-cols-auto gap-4'>
+        <ResourcesContainer resources={resources} />
+      </div>
+    </Layout>
   )
-    
+
 }

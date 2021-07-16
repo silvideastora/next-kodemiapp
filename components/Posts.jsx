@@ -6,7 +6,7 @@ import Notice from './Notice'
 import { GetPosts } from '../lib/api'
 
 
-export default function Posts ({posts}) {
+export default function Posts ({posts, isAdmin}) {
   const [activeModal, setActiveModal] = useState (false) 
   const settings = {
     dots: true,
@@ -36,11 +36,11 @@ export default function Posts ({posts}) {
         </Modal>
         <div className='container flex justify-between mb-2'>
           <h3>Avisos</h3>
-          <button onClick={event => setActiveModal(true)}className={classNames(
+          {isAdmin && <button onClick={event => setActiveModal(true)}className={classNames(
             'border border-cyan-ka rounded-md',
             'text-sm',
             'p-1'
-          )}type='button'>Crear nuevo</button>
+          )}type='button'>Crear nuevo</button>}
         </div>
         <div className={classNames(
           'col-span-2 xs:col-span-1',

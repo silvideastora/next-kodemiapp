@@ -49,18 +49,6 @@ export default function KoderProfileForm ({closeModal}) {
             </div>
             <div className={classNames('mb-4')}>
               <label className={classNames(
-                'label-modal'
-                )} for='imagen'>
-                  Tu imagen
-              </label>
-              <input {...register('picture', {
-                  required: { value: true, message: 'Campo obligatorio...' }
-                })}className={classNames(
-                'input-modal'
-                )} id="username" type="text" placeholder="Tu foto"/> 
-            </div>
-            <div className={classNames('mb-4')}>
-              <label className={classNames(
                 'label-modal')} for='text'>
                 Github
               </label>
