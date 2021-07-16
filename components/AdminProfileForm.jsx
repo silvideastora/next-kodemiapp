@@ -47,18 +47,6 @@ export default function AdminProfileForm ({closeModal}) {
                 })} className={classNames('input-modal')}
                 id='last-name' type='text' placeholder='Apellido'/> 
             </div>
-            <div className={classNames('mb-4')}>
-              <label className={classNames(
-                'label-modal'
-                )} for='picture'>
-                  Tu imagen
-              </label>
-              <input {...register('picture', {
-                  required: { value: true, message: 'Campo obligatorio...' }
-                })}className={classNames(
-                'input-modal'
-                )} id='picture' type='text' placeholder='Tu foto'/> 
-            </div>
             <div className={classNames(
               'flex ',
               'items-center',
