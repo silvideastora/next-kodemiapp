@@ -13,7 +13,7 @@ export default function AdminProfileCard({ admin }) {
     }
   
     return (
-    <div>
+    <div className='xs:hidden'>
 				<h3 className={classNames(
           'mb-3.5'
         )}>Perfil</h3>
