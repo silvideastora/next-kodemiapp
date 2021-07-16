@@ -5,7 +5,7 @@ export default function ResourcesContainer({ resources }) {
   return (
     <div className='container'>
       <div className='container bg-black xs:hidden'>
-        <img className='object-cover w-full opacity-50' src='../images/banner-ka.jpeg' />
+        <img className='object-cover w-full opacity-50' src='../images/banner-ka.png' />
       </div>
       <ul className={classNames(
         'bg-black',
