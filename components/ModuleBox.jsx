@@ -14,12 +14,15 @@ export default function ModuleBox({modules}) {
     router.push(`/resources/${topic.title}`)
   }
   return (
+    
+      
       <div className={classNames(
         'grid grid-cols-3',
         'lg:gap-4 sm:gap-1',
         'xs:grid-cols-1 '
         )}>
-      <div>
+        <div>
+          <h3>Módulos</h3>
             <div className={classNames(
             'bg-black-ka',
             'border border-white-ka',
@@ -49,16 +52,15 @@ export default function ModuleBox({modules}) {
                 </div>
             </div>
         </div>
-        <div className={classNames(
-          'col-span-2',
-          'font-medium'
-          )}>
+        <div className='col-span-2'>
+          <h3>Recursos</h3>
+        
           <div className= {classNames(
             'bg-black-ka',
             'border border-white-ka',
             'min-h-full',
-            'p-2',
-            'py-5 px-5', 
+            '',
+            'py-2 px-5', 
             'rounded-lg',
             'text-white-ka',
             'text-medium'
@@ -89,10 +91,12 @@ export default function ModuleBox({modules}) {
                         {topic.title}</p>
                   </li>)
                 )}
-              </ul>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      
+     
   )
   }

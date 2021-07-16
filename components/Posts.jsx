@@ -1,7 +1,11 @@
 import classNames from 'classnames'
-import Slider from "react-slick";
+import Slider from 'react-slick'
+import {useState} from 'react'
+import Modal from 'react-modal'
+import Notice from './Notice'
 
 export default function Posts ({posts}) {
+  const [activeModal, setActiveModal] = useState (false) 
   const settings = {
     dots: true,
     infinite: true,
@@ -10,7 +14,32 @@ export default function Posts ({posts}) {
     slidesToScroll: 1,
     arrows: false
   };
+  const closeModal = () => {
+    setActiveModal (false)
+  }
     return (
+      <div>
+        <Modal
+          isOpen={activeModal}
+          className= {classNames(
+            'absolute',
+            'rounded-xl',
+            'bg-gray-ka',
+            'flex-grow',
+            'left-20  top-20',
+            'text-white-ka'
+          )}  
+        >
+          <Notice closeModal={closeModal}/>
+        </Modal>
+        <div className='container flex justify-between mb-2'>
+          <h3>Avisos</h3>
+          <button onClick={event => setActiveModal(true)}className={classNames(
+            'border border-cyan-ka rounded-md',
+            'text-sm',
+            'p-1'
+          )}type='button'>Crear nuevo</button>
+        </div>
         <div className={classNames(
           'col-span-2 xs:col-span-1',
           'flex-grow-0'
@@ -80,6 +109,7 @@ export default function Posts ({posts}) {
                         </Slider>
                     </div>
                 </div>
+        </div>
         </div>
     )
 }
