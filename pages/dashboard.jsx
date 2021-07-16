@@ -13,10 +13,10 @@ import { useEffect } from 'react'
 export default function Dashboard() {
 
   useEffect(() => {
-    if( typeof window !== 'undefined' ){
+    if (typeof window !== 'undefined') {
       const token = window.localStorage.getItem('token')
       const typeUser = window.localStorage.getItem('typeUser')
-      if ( !token && typeUser !== 'Koder logged'){
+      if (!token && typeUser !== 'Koder logged') {
         Router.push('login')
       }
     }
@@ -26,7 +26,7 @@ export default function Dashboard() {
     <Layout footer={false}>
       <div className='container'>
         <div className='container h-auto xs:hidden'>
-          <img className='object-cover h-auto w-full' src='../images/banner-ka.png'/>
+          <img className='object-cover h-auto w-full' src='../images/banner-ka.png' />
         </div>
         <div className={classNames(
           'grid',
@@ -39,15 +39,15 @@ export default function Dashboard() {
           'lg:gap-4',
           'mx-auto mt-10'
         )}>
-        <KoderProfileCard koder={koder}/>
-        <div className='lg:col-span-2 sm:grid-col-1'>
-          <Posts posts={posts}/>
-        </div>
-        <div className='col-span-1 lg:col-span-3'>
-          <ModuleBox modules={Modules}/>
+          <KoderProfileCard koder={koder} />
+          <div className='lg:col-span-2 sm:grid-col-1'>
+            <Posts posts={posts} />
+          </div>
+          <div className='col-span-1 lg:col-span-3'>
+            <ModuleBox modules={Modules} />
+          </div>
         </div>
       </div>
-    </div>
     </Layout>
   )
 }
