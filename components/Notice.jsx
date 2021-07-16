@@ -23,17 +23,20 @@ export default function Notice({closeModal}) {
 
   return (
     <>
+    <div className={classNames(
+          'max-w-xs',' p-10'
+          )}>
       <form 
         className={classNames(
-          'lg:border-2 lg:border-gray-ka',
+          'lg:border lg:border-gray-ka',
           'rounded-md',
-          'p-0 lg:p-8'
+          'p-0 lg:p-0'
         )} 
         onSubmit={handleSubmit(onSubmit)}>
         
         
-        <label className='block text-left my-6 text-xl mb-0 mt-0'>
-          Título
+        <label className='block text-left my-6 text-md mb-0 mt-0'>
+          Título del Aviso
         </label>
         <input {...register('title', {
           required: { value: true, message: 'Campo obligatorio...😣' },
@@ -42,7 +45,7 @@ export default function Notice({closeModal}) {
           className={classNames(
             'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none focus:bg-black',
             'w-full text-lg py-1 pl-2',
-            'border border-cyan-ka rounded-md bg-black-ka'
+            'rounded-md bg-black-ka'
           )}
           type='text'
           aria-label='Filter projects'
@@ -52,7 +55,7 @@ export default function Notice({closeModal}) {
             <li>{errors.title.message}</li>
           </span>
         )}
-        <label className='block text-left text-xl mb-0 mt-2'>
+        <label className='block text-left text-md mb-0 mt-2'>
           Generación
         </label>
         <select {...register('generation', {
@@ -61,7 +64,6 @@ export default function Notice({closeModal}) {
           className={classNames(
             'w-full',
             'bg-black-ka',
-            'border-2 border-cyan-ka',
             'rounded-md',
             'h-10',
             'pl-4',
@@ -77,7 +79,7 @@ export default function Notice({closeModal}) {
             <li>{errors.generation.message}</li>
           </span>
         )}
-        <label className='block text-left my-6 text-xl mb-0 mt-2'>
+        <label className='block text-left my-6 text-md mb-0 mt-2'>
           Contenido
         </label>
         <textarea {...register('contents', {
@@ -87,7 +89,7 @@ export default function Notice({closeModal}) {
           className={classNames(
             'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none',
             'w-full text-lg py-1 pl-5',
-            'border-2 border-cyan-ka rounded-md bg-black-ka'
+            'rounded-md bg-black-ka'
           )}
           type='text'
           aria-label='Filter projects'
@@ -97,6 +99,11 @@ export default function Notice({closeModal}) {
             <li>{errors.contents.message}</li>
           </span>
         )}
+        <div className={classNames(
+              'flex ',
+              'items-center',
+              'justify-between'
+              )}>
         <a className={classNames(
         'align-baseline', 
         'inline-block',
@@ -107,17 +114,16 @@ export default function Notice({closeModal}) {
       </a> 
         <button
           className={classNames(
-            'mt-4 h-10',
-            'flex items-center justify-center',
-            'rounded-md bg-transparent text-white-ka border border-cyan-ka',
-            'hover:bg-cyan-ka hover:text-black-ka'
+            'button-ka',
+            'hover:bg-cyan-ka'
           )}
           type='submit'
         >
           Enviar
         </button>
+        </div>
       </form>
-              
+      </div>       
     </>
   )
 }

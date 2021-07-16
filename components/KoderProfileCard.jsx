@@ -14,7 +14,10 @@ export default function KoderProfileCard({ koder }) {
   }
 
   return (
-    
+    <div>
+      <h3 className={classNames(
+          'mb-3.5'
+        )}>Perfil</h3>
       <div className={classNames(
         'bg-black-ka',
         'border border-white-ka',
@@ -92,6 +95,6 @@ export default function KoderProfileCard({ koder }) {
         </p>
     </div>
 </div>
-
+</div>
 )
 }
