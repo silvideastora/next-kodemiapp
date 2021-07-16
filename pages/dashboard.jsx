@@ -33,7 +33,7 @@ export default function Dashboard() {
         )}>
         <KoderProfileCard koder={koder}/>
         <div className='lg:col-span-2 sm:grid-col-1'>
-          <Posts posts={posts}/>
+          <Posts posts={posts} isAdmin={false}/>
         </div>
         <div className='col-span-1 lg:col-span-3'>
           <ModuleBox modules={Modules}/>
