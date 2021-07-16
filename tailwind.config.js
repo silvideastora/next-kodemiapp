@@ -2,6 +2,9 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    container: {
+      center: true,
+    },
 
     fontFamily:{
       'body':['Poppins','sans-serif'] 
@@ -32,13 +35,14 @@ module.exports = {
         }
       },
       screens: {
-        'xs': {'max': '640px', 'min': '350px'}
+        'xs': {'max': '640px', 'min': '320px'}
       }
     },
   },
   variants: {
     extend: {
     },
+    
   },
   plugins: [],  
 }
