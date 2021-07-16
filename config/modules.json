@@ -1,190 +1,187 @@
 [
-    {
-      "title": "Hello Koders",
-      "topics": [
-        {
-          "title":"Pensamiento estructurado",           
-          "icon":"/icons/pre-bootcamp/pensamiento-est.svg"
-        },
-        {
-          "title":"Pensamiento lógico",           
-          "icon":"/icons/pre-bootcamp/pensamiento-log.svg"
-        },
-        {
-          "title":"Pensamiento paralelo",           
-          "icon":"/icons/pre-bootcamp/pensamiento-par.svg"
-        },
-        {
-          "title":"Algorítmos",           
-          "icon":"/icons/pre-bootcamp/algoritmos.svg"
-        },
-        {
-          "title":"Pseudocódigo",           
-          "icon":"/icons/pre-bootcamp/pseudocodigo.svg"
-        },
-        {
-          "title":"Diagramas de flujo",           
-          "icon":"/icons/pre-bootcamp/diagrama-de-flujo.svg"
-        },
-        {
-          "title":"JS estructurado",           
-          "icon":"/icons/pre-bootcamp/js-estructurado.svg"
-        }
-        ]
-
-    },
-    {
-      "title": "Front End",
-      "topics": [ 
-        {
-          "title": "Git & Github",
-          "icon": "/icons/front-end/github.svg"
-        },
-        {
-          "title": "HTML5",
-          "icon": "/icons/front-end/HTML.svg"
-        },
-        {
-          "title": "CSS3",
-          "icon": "/icons/front-end/CSS.svg"
-        },
-        {
-          "title": "Sass",
-          "icon": "/icons/front-end/SASS.svg"
-        },
-        {
-          "title": "Bootstrap 4",
-          "icon": "/icons/front-end/Bootstrap.svg"
-        },
-        {
-          "title": "JavaScript (ES5 & ES6)",
-          "icon": "/icons/front-end/JavaScript.svg"
-        },
-        {
-          "title": "JQuery",
-          "icon": "/icons/front-end/jQuery.svg"
-        },
-        {
-          "title": "AJAX",
-          "icon": "/icons/front-end/AJAX.svg"
-        },
-        {
-          "title": "DOM",
-          "icon": "/icons/front-end/DOM.svg"
-            }
-        ]
-
-    },
-    {
-      "title": "Back End",
-      "topics": [
-        {
-          "title": "Linux / Consola",
-          "icon": "/icons/back-end/Linux.svg"
-        },
-        {
-          "title": "La Terminal",
-          "icon": "/icons/back-end/Terminal.svg"
-        },
-        {
-          "title": "Modelo cliente-servidor",
-          "icon": "/icons/back-end/cliente-servidor.svg"
-        },
-        {
-          "title": "Hypermedia",
-          "icon": "/icons/back-end/hypermedia.svg"
-        },
-        {
-          "title": "REST / RESTfull",
-          "icon": "/icons/back-end/REST-RESTfull.svg"
-        },
-        {
-          "title": "Clean Architecture",
-          "icon": "/icons/back-end/clean-architecture.svg"
-        },
-        {
-          "title": "NodeJS/npm",
-          "icon": "/icons/back-end/Node.svg"
-        },
-        {
-          "title": "ExpressJS",
-          "icon": "/icons/back-end/express.svg"
-        },
-        {
-          "title": "Base de Datos",
-          "icon": "/icons/back-end/bases-de-datos.svg"
-        },
-        {
-          "title": "Mongo y Mongoose",
-          "icon": "/icons/back-end/mongoDB.svg"
-        },
-        {
-          "title": "Autenticación JWT",
-          "icon": "/icons/back-end/JWT.svg"
-        },
-        {
-          "title": "Cloud (IBM & AWS)",
-          "icon": "/icons/back-end/Cloud.svg"
-        }
-      ]
-
-    },{
-        "title": "Front End Moderno",
-        "topics": [
-            {
-              "title": "React",
-              "icon": "/icons/front-end-moderno/react.svg"
-            },
-            {
-              "title": "React-router",
-              "icon": "/icons/front-end-moderno/react-router.svg"
-            },
-            {
-              "title": "React Hooks",
-              "icon": "/icons/front-end-moderno/hooks.svg"
-            },
-            {
-              "title": "FetchAPI",
-              "icon": "/icons/front-end-moderno/fetchAPI.svg"
-            },
-            {
-              "title": "Babel",
-              "icon": "/icons/front-end-moderno/Babel.svg"
-            }
-        ]
-
-    },
-    {
-        "title": "Talleres",
-        "topics": [
-          {
-            "title": "Github Avanzado",
-            "icon": "/icons/talleres/git.svg"
-          },
-          {
-            "title": "Principios de UX/UI",
-            "icon": "/icons/talleres/ux-ui.svg"
-          },
-          {
-            "title": "Scrum Fundamentals",
-            "icon": "/icons/talleres/scrum.svg"
-          },
-          {
-            "title": "AWS Cloud",
-            "icon": "/icons/talleres/aws.svg"
-          },
-          {
-            "title": "Xtreme programming",
-            "icon": "/icons/talleres/extreme.svg"
-          },
-          {
-            "title": "Negocios TI",
-            "icon": "/icons/talleres/negociosTI.svg"
-          },
-          {
-            "title": "JamStack",
-            "icon": "/icons/talleres/jamstack.svg"
-          }
-        ]
-    }
+  {
+    "title": "Hello Koders",
+    "topics": [
+      {
+        "title": "Pensamiento estructurado",
+        "icon": "/icons/pre-bootcamp/pensamiento-est.svg"
+      },
+      {
+        "title": "Pensamiento logico",
+        "icon": "/icons/pre-bootcamp/pensamiento-log.svg"
+      },
+      {
+        "title": "Pensamiento paralelo",
+        "icon": "/icons/pre-bootcamp/pensamiento-par.svg"
+      },
+      {
+        "title": "Algoritmos",
+        "icon": "/icons/pre-bootcamp/algoritmos.svg"
+      },
+      {
+        "title": "Pseudocodigo",
+        "icon": "/icons/pre-bootcamp/pseudocodigo.svg"
+      },
+      {
+        "title": "Diagramas de flujo",
+        "icon": "/icons/pre-bootcamp/diagrama-de-flujo.svg"
+      },
+      {
+        "title": "Primeros programas con Javascript estructurado",
+        "icon": "/icons/pre-bootcamp/js-estructurado.svg"
+      }
+    ]
+  },
+  {
+    "title": "Front End",
+    "topics": [
+      {
+        "title": "Git",
+        "icon": "/icons/front-end/github.svg"
+      },
+      {
+        "title": "HTML5",
+        "icon": "/icons/front-end/HTML.svg"
+      },
+      {
+        "title": "CSS",
+        "icon": "/icons/front-end/CSS.svg"
+      },
+      {
+        "title": "SASS",
+        "icon": "/icons/front-end/SASS.svg"
+      },
+      {
+        "title": "Bootstrap4",
+        "icon": "/icons/front-end/Bootstrap.svg"
+      },
+      {
+        "title": "Javascript",
+        "icon": "/icons/front-end/JavaScript.svg"
+      },
+      {
+        "title": "Jquery",
+        "icon": "/icons/front-end/jQuery.svg"
+      },
+      {
+        "title": "AJAX",
+        "icon": "/icons/front-end/AJAX.svg"
+      },
+      {
+        "title": "DOM",
+        "icon": "/icons/front-end/DOM.svg"
+      }
+    ]
+  },
+  {
+    "title": "Back End",
+    "topics": [
+      {
+        "title": "Linux",
+        "icon": "/icons/back-end/Linux.svg"
+      },
+      {
+        "title": "La terminal",
+        "icon": "/icons/back-end/Terminal.svg"
+      },
+      {
+        "title": "Modelo CLiente-Servidor",
+        "icon": "/icons/back-end/cliente-servidor.svg"
+      },
+      {
+        "title": "Hypermedia",
+        "icon": "/icons/back-end/hypermedia.svg"
+      },
+      {
+        "title": "REST",
+        "icon": "/icons/back-end/REST-RESTfull.svg"
+      },
+      {
+        "title": "Clean architecture",
+        "icon": "/icons/back-end/clean-architecture.svg"
+      },
+      {
+        "title": "Nodejs",
+        "icon": "/icons/back-end/Node.svg"
+      },
+      {
+        "title": "ExpressJS",
+        "icon": "/icons/back-end/express.svg"
+      },
+      {
+        "title": "Base de Datos",
+        "icon": "/icons/back-end/bases-de-datos.svg"
+      },
+      {
+        "title": "Mongo y Mongoose",
+        "icon": "/icons/back-end/mongoDB.svg"
+      },
+      {
+        "title": "Autenticación JWT",
+        "icon": "/icons/back-end/JWT.svg"
+      },
+      {
+        "title": "Cloud (IBM & AWS)",
+        "icon": "/icons/back-end/Cloud.svg"
+      }
+    ]
+  },
+  {
+    "title": "Front End Moderno",
+    "topics": [
+      {
+        "title": "React",
+        "icon": "/icons/front-end-moderno/react.svg"
+      },
+      {
+        "title": "React-router",
+        "icon": "/icons/front-end-moderno/react-router.svg"
+      },
+      {
+        "title": "React-Hooks",
+        "icon": "/icons/front-end-moderno/hooks.svg"
+      },
+      {
+        "title": "FetchAPI",
+        "icon": "/icons/front-end-moderno/fetchAPI.svg"
+      },
+      {
+        "title": "Babel",
+        "icon": "/icons/front-end-moderno/Babel.svg"
+      }
+    ]
+  },
+  {
+    "title": "Talleres",
+    "topics": [
+      {
+        "title": "Github Avanzado",
+        "icon": "/icons/talleres/git.svg"
+      },
+      {
+        "title": "Principios de UX/UI",
+        "icon": "/icons/talleres/ux-ui.svg"
+      },
+      {
+        "title": "Scrum Fundamentals",
+        "icon": "/icons/talleres/scrum.svg"
+      },
+      {
+        "title": "AWS Cloud",
+        "icon": "/icons/talleres/aws.svg"
+      },
+      {
+        "title": "Xtreme programming",
+        "icon": "/icons/talleres/extreme.svg"
+      },
+      {
+        "title": "Negocios TI",
+        "icon": "/icons/talleres/negociosTI.svg"
+      },
+      {
+        "title": "JamStack",
+        "icon": "/icons/talleres/jamstack.svg"
+      }
+    ]
+  }
 ]
