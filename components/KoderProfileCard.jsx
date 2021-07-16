@@ -15,84 +15,87 @@ export default function KoderProfileCard({ koder }) {
   }
 
   return (
-
-    <div className={classNames(
-      'bg-black-ka',
-      'border border-white-ka',
-      'mb-0.5',
-      'px-4',
-      'py-2',
-      'rounded-lg',
-      'flex flex-col',
-      'items-center justify-center',
-      'text-white-ka',
-      'w-full',
-      'xs:hidden'
-    )}>
-      <Modal
-        isOpen={activeModal}
-        className={classNames(
-          'absolute',
-          'rounded-xl',
-          'bg-gray-ka',
-          'flex-grow',
-          'left-20  top-20',
-          'text-white-ka'
-        )}
-      >
-        <KoderProfileForm closeModal={closeModal} />
-      </Modal>
+    <div>
+      <h3 className={classNames(
+        'mb-3.5'
+      )}>Perfil</h3>
       <div className={classNames(
-        'mx-auto',
-        'mt-2'
+        'bg-black-ka',
+        'border border-white-ka',
+        'mb-0.5',
+        'px-4',
+        'py-2',
+        'rounded-lg',
+        'flex flex-col',
+        'items-center justify-center',
+        'text-white-ka',
+        'w-full',
+        'xs:hidden'
       )}>
-        <img
+        <Modal
+          isOpen={activeModal}
           className={classNames(
-            'rounded-full',
-            'w-24'
+            'absolute',
+            'rounded-xl',
+            'bg-gray-ka',
+            'flex-grow',
+            'left-20  top-20',
+            'text-white-ka'
           )}
-          src='/images/nayeli.png'
-        />
-        <i onClick={(e) => changeProfile(koder)} className={classNames(
-          'block',
-          'cursor-pointer',
-          'far fa-edit',
-          'hover:text-cyan-ka',
-          'mt-1',
-          'text-center'
+        >
+          <KoderProfileForm closeModal={closeModal} />
+        </Modal>
+        <div className={classNames(
+          'mx-auto',
+          'mt-2'
         )}>
-        </i>
-      </div>
-      <div className={classNames(
-        'pt-5',
-        ' text-center')} >
-        <h3 className={classNames(
-          'font-medium',
-          'lg:text-xl',
-          'text-base '
-        )}>
-          {koder.firstName} {koder.lastName}
-        </h3>
-        <span className={classNames(
-          'text-xs',
-          ' lg:text-base'
-        )}>
-          <i className={classNames(
-            'fab fa-github',
-            ' mr-2'
-          )} />
-          @{koder.gitHub}
-        </span>
-        <p>{koder.location}</p>
-        <p className={classNames(
-          'font-semibold',
-          'pt-0',
-          'text-cyan-ka'
-        )}>
-          Generación {koder.generation}
-        </p>
+          <img
+            className={classNames(
+              'rounded-full',
+              'w-24'
+            )}
+            src='/images/nayeli.png'
+          />
+          <i onClick={(e) => changeProfile(koder)} className={classNames(
+            'block',
+            'cursor-pointer',
+            'far fa-edit',
+            'hover:text-cyan-ka',
+            'mt-1',
+            'text-center'
+          )}>
+          </i>
+        </div>
+        <div className={classNames(
+          'pt-5',
+          ' text-center')} >
+          <h3 className={classNames(
+            'font-medium',
+            'lg:text-xl',
+            'text-base '
+          )}>
+            {koder.firstName} {koder.lastName}
+          </h3>
+          <span className={classNames(
+            'text-xs',
+            ' lg:text-base'
+          )}>
+            <i className={classNames(
+              'fab fa-github',
+              ' mr-2'
+            )} />
+            @{koder.gitHub}
+          </span>
+          <p>{koder.location}</p>
+          <p className={classNames(
+            'font-semibold',
+            'pt-0',
+            'text-cyan-ka'
+          )}>
+            Generación {koder.generation}
+          </p>
+        </div>
       </div>
     </div>
-
   )
 }
