@@ -2,12 +2,22 @@ import Navbar from './Nav/Navbar'
 import classNames from 'classnames'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { createPosts } from '../lib/api'
 
 export default function Notice({closeModal}) {
   const { register, handleSubmit, formState: { errors } } = useForm()
+  const onSubmit = async (data, e) => {
+  const {generation, contents, title} = data
+  data = {title, info: contents, generation: {
+    bootcamp:'JS',
+    number: parseInt(generation)
+  }}
 
-  const onSubmit = (data, e) => {
-    console.log(data)
+    const token = window.localStorage.getItem('token') 
+    const response= await createPosts(data, token)
+    console.log(response)
+    console.log(token)
+    
     e.target.reset();
   };
 
@@ -31,8 +41,8 @@ export default function Notice({closeModal}) {
         })}
           className={classNames(
             'focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none focus:bg-black',
-            'w-full text-lg py-1 pl-5',
-            'border-2 border-cyan-ka rounded-md bg-black-ka'
+            'w-full text-lg py-1 pl-2',
+            'border border-cyan-ka rounded-md bg-black-ka'
           )}
           type='text'
           aria-label='Filter projects'
@@ -59,10 +69,8 @@ export default function Notice({closeModal}) {
             'mt-0'
           )}
         >
-          <option value='js-11g'>Js 11g</option>
-          <option value='py-1g'>Py 1g</option>
-          <option value='js-12g'>Js 12g</option>
-          <option value='py-2g'>Py 2g</option>
+          <option value= {11} >JS 11</option>
+          <option value={12}>JS 12</option>
         </select>
         {errors.generation && (
           <span className='text-error-ka'>
@@ -99,9 +107,9 @@ export default function Notice({closeModal}) {
       </a> 
         <button
           className={classNames(
-            'mt-4 w-full h-10',
+            'mt-4 h-10',
             'flex items-center justify-center',
-            'rounded-md bg-transparent text-white-ka border-2 border-cyan-ka',
+            'rounded-md bg-transparent text-white-ka border border-cyan-ka',
             'hover:bg-cyan-ka hover:text-black-ka'
           )}
           type='submit'

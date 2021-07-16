@@ -1,8 +1,10 @@
 import classNames from 'classnames'
 import Slider from 'react-slick'
-import {useState} from 'react'
+import { useState } from 'react'
 import Modal from 'react-modal'
 import Notice from './Notice'
+import { GetPosts } from '../lib/api'
+
 
 export default function Posts ({posts}) {
   const [activeModal, setActiveModal] = useState (false) 
@@ -59,40 +61,41 @@ export default function Posts ({posts}) {
                       'bg-black-ka',
                       ' w-full'
                       )}>
-                        <Slider {...settings}>
+                        <Slider {...settings}
+                        >
                           {posts.map((post,index)=>(
                             <div key={index}>
                               <div className={classNames('flex'
                               )}>
                                 <img className={classNames(
                                   'h-12',
-                                  'mr-2 mt-3 mx-auto',
-                                  'rounded-full',
-                                  'w-12 '
-                                  )} src={post.mentorImage}/>
+                                  'mr-2 mt-3',
+                                  'rounded-full'
+                                  )} src='/images/Viri.jpeg'/>
                                 <div className={classNames(
-                                  'p-2 mr-1'
+                                  'p-2 mr-1 w-11/12'
                                   )}>
                                   <h3 className={classNames(
                                     'flex items-start',
                                     'lg:text-xl font-semibold'
-                                    )}>{post.postTitle}
+                                    )}>{post.title}
                                   </h3>
                                   <p className={classNames(
                                     'mt-1 mr-1',
                                     'font-light',
                                     ' text-sm '
-                                    )}>{post.postDate}
+                                    )}>{post.createdAt}
                                   </p>
                                   <p className={classNames(
                                     'font-normal',
                                     'mt-2'
-                                    )}>{post.postContent}
+                                    )}>{post.info}
                                   </p>
                                   <i className={classNames(
                                     'block',
                                     'far fa-heart',
                                     'mr-2 mt-2',
+                                    'mx-auto',
                                     'stroke-current',
                                     'text-2xl text-right text-cyan-ka'
                                     )}>
