@@ -11,6 +11,7 @@ export default function ListKoders({firstName, lastName, isActive, id }) {
     setChecked(!checked)
     const koderToken = window.localStorage.getItem('token')
     const response = await changeIsActive(id, koderToken, {isActive:!checked})
+    console.log('resp: ', response.data)
   }
   
   return (

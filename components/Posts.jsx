@@ -5,9 +5,22 @@ import Modal from 'react-modal'
 import Notice from './Notice'
 import { GetPosts, like } from '../lib/api'
 
-export default function Posts({ posts, isAdmin }) {
-  console.log('POSTS:', posts)
+export default function Posts({ isAdmin }) {
+  // console.log('POSTS:', posts)
   const [activeModal, setActiveModal] = useState(false)
+  const [posts, setPosts] = useState([])
+
+  useEffect( async () => {
+    const generationNumber = window.localStorage.getItem('numberGeneration')
+    const postsResponse = await GetPosts({
+      generation: {
+        bootcamp: 'JS',
+        number: parseInt(generationNumber)
+      },
+    })
+    setPosts(postsResponse.data.reverse())
+    console.log('numero de generacion:', generationNumber, postsResponse.data )
+  }, [])
 
   const settings = {
     dots: true,

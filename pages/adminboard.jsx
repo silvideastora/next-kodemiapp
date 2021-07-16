@@ -22,15 +22,7 @@ export default function AdminBoard() {
       }
     }
 
-    const generationNumber = window.localStorage.getItem('numberGeneration')
-    const postsResponse = await GetPosts({
-      generation: {
-        bootcamp: 'JS',
-        number: parseInt(generationNumber)
-      },
-    })
-    setPosts(postsResponse.data)
-    console.log('numero de generacion:', generationNumber, postsResponse.data )
+
   }, [])
 
   return (
@@ -50,7 +42,7 @@ export default function AdminBoard() {
         )}>
           <AdminProfileCard admin={admin} />
           <div className='lg:col-span-2 sm:grid-col-1'>
-            <Posts posts={posts} isAdmin={true} />
+            <Posts isAdmin={true} />
           </div>
           <div className='col-span-1 lg:col-span-3'>
             <GenerationsKoders/>

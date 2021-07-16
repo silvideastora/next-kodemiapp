@@ -19,9 +19,9 @@ export default function Notice({ closeModal }) {
     const response = await createPosts(data, token)
     console.log('regreso de crear post', response.data)
     console.log(token)
-
-    e.target.reset();
-  };
+    e.target.reset()
+    window.location.reload()
+  }
 
   return (
     <>
