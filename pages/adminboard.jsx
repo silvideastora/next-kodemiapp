@@ -8,9 +8,8 @@ import admin from '../config/admin.json'
 import Posts from '../components/Posts'
 import Layout from '../components/Layout'
 import { GetPosts } from '../lib/api'
+import GenerationsKoders from '../components/GenerationBox/GenerationsKoders'
 import Router from 'next/router'
-
-
 
 export default function AdminBoard() {
   const [posts, setPosts] = useState([])
@@ -18,20 +17,20 @@ export default function AdminBoard() {
     if (typeof window !== 'undefined') {
       const token = window.localStorage.getItem('token')
       const typeUser = window.localStorage.getItem('typeUser')
-      console.log(typeUser)
       if (!token || typeUser === 'Koder logged') {
-
         Router.push('login')
       }
     }
+
+    const generationNumber = window.localStorage.getItem('numberGeneration')
     const postsResponse = await GetPosts({
       generation: {
         bootcamp: 'JS',
-        number: 10
+        number: generationNumber
       },
     })
-    console.log(postsResponse)
     setPosts(postsResponse.data)
+    console.log(generationNumber, postsResponse.data )
   }, [])
 
   return (
@@ -43,14 +42,18 @@ export default function AdminBoard() {
         <div className={classNames(
           'grid',
           'grid-cols-2',
-          'p-2 px-8 sm:py-12 md:py-16',
+          'py-6 sm:py-12 md:py-16',
+          'px-3',
           'xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3',
-          'lg:gap-4',
-          'mx-auto mt-10'
+          'gap-y-4 lg:gap-y-16 lg:gap-x-8',
+          'mx-auto'
         )}>
           <AdminProfileCard admin={admin} />
           <div className='lg:col-span-2 sm:grid-col-1'>
             <Posts posts={posts} isAdmin={true} />
+          </div>
+          <div className='col-span-1 lg:col-span-3'>
+            <GenerationsKoders/>
           </div>
           <div className='col-span-1 lg:col-span-3'>
             <ModuleBox modules={Modules} />

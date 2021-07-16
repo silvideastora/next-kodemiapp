@@ -56,6 +56,7 @@ export default function Posts({ posts, isAdmin }) {
         'flex-grow-0'
       )}>
         <div className={classNames(
+          'flex flex-col sm:col-span-1',
           'bg-black-ka',
           'border border-white-ka',
           'mb-0.5',
@@ -100,19 +101,21 @@ export default function Posts({ posts, isAdmin }) {
                         'mt-2'
                       )}>{post.info}
                       </p>
+                      <div className='text-right'>
                       <i onClick={() => increaseLike(post._id)} className={classNames(
-                        'block',
                         'far fa-heart',
                         'mr-2 mt-2',
                         'mx-auto',
                         'stroke-current',
-                        'text-2xl text-right text-cyan-ka'
+                        'text-xl  text-cyan-ka'
                       )}>
-                        <span className={classNames(
-                          'text-xs'
-                        )}>{post.likes}
-                        </span>
                       </i>
+                        <span className={classNames(
+                          'text-xs text-cyan-ka'
+                        )}>
+                          {post.likes}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>

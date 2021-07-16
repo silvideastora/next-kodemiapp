@@ -23,11 +23,11 @@ export default function ModuleBox({ modules }) {
 
     <div className={classNames(
       'grid grid-cols-3',
-      'lg:gap-4 sm:gap-1',
+      'sm:gap-2 lg:gap-8',
       'xs:grid-cols-1 '
     )}>
       <div>
-        <h3>Módulos</h3>
+        <h3 className='mb-2'>Módulos</h3>
         <div className={classNames(
           'bg-black-ka',
           'border border-white-ka',
@@ -35,7 +35,8 @@ export default function ModuleBox({ modules }) {
           'py-6',
           'shadow-xl rounded-lg',
           'text-white',
-          'font-semibold'
+          'font-semibold',
+          'h-full'
         )}>
           <div className={classNames(
             'p-2'
@@ -43,12 +44,12 @@ export default function ModuleBox({ modules }) {
             <ul>
               {modules.map((module, index) => (
                 <li onClick={(e) => changeModule(module)} key={index} className={classNames(
-                  'block text-xl text-center',
+                  'block text-center',
                   'cursor-pointer',
                   'font-medium',
                   'hover:text-cyan-ka',
                   'px-2 py-2',
-                  'text-xl',
+                  'text-base',
                   'transition duration-100 ease-in-out',
                   'transform  hover:scale-110',
                 )}>{module.title}</li>
@@ -57,8 +58,8 @@ export default function ModuleBox({ modules }) {
           </div>
         </div>
       </div>
-      <div className='col-span-2'>
-        <h3>Recursos</h3>
+      <div className='col-span-2  xs:mt-4'>
+        <h3 className='mb-2'>Recursos</h3>
 
         <div className={classNames(
           'bg-black-ka',

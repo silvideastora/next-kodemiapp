@@ -12,10 +12,10 @@ export default function Notice({closeModal}) {
     bootcamp:'JS',
     number: parseInt(generation)
   }}
-
+  console.log('data del post', data)
     const token = window.localStorage.getItem('token') 
     const response= await createPosts(data, token)
-    console.log(response)
+    console.log('regreso de crear post', response.data)
     console.log(token)
     
     e.target.reset();
