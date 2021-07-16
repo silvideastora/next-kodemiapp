@@ -8,9 +8,8 @@ import admin from '../config/admin.json'
 import Posts from '../components/Posts'
 import Layout from '../components/Layout'
 import { GetPosts } from '../lib/api'
+import GenerationsKoders from '../components/GenerationBox/GenerationsKoders'
 import Router from 'next/router'
-
-
 
 export default function AdminBoard() {
   const [posts, setPosts] = useState([])
@@ -18,20 +17,20 @@ export default function AdminBoard() {
     if (typeof window !== 'undefined') {
       const token = window.localStorage.getItem('token')
       const typeUser = window.localStorage.getItem('typeUser')
-      console.log(typeUser)
       if (!token || typeUser === 'Koder logged') {
-
         Router.push('login')
       }
     }
+
+    const generationNumber = window.localStorage.getItem('numberGeneration')
     const postsResponse = await GetPosts({
       generation: {
         bootcamp: 'JS',
-        number: 10
+        number: generationNumber
       },
     })
-    console.log(postsResponse)
     setPosts(postsResponse.data)
+    console.log(generationNumber, postsResponse.data )
   }, [])
 
   return (
@@ -52,6 +51,9 @@ export default function AdminBoard() {
           <AdminProfileCard admin={admin} />
           <div className='lg:col-span-2 sm:grid-col-1'>
             <Posts posts={posts} isAdmin={true} />
+          </div>
+          <div className='col-span-1 lg:col-span-3'>
+            <GenerationsKoders/>
           </div>
           <div className='col-span-1 lg:col-span-3'>
             <ModuleBox modules={Modules} />

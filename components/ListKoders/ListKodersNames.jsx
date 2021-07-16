@@ -1,16 +1,15 @@
+
 import React, { useState } from 'react'
-import koders from '../../config/koders.json'
 import ListKoders from './ListKoders'
 
-export default function ListKodersNames({firstName, lastName}) {
-
+export default function ListKodersNames({koders}) {
   const [ checked, setChecked ] = useState(false)
   return (
     <div>
-      <ul className='p-6'>
+      <ul>
         {
-          koders.map(({ firstName, lastName }, index) => (
-            <ListKoders firstName={firstName} lastName={lastName} key={index}/>
+          koders.map(({ firstName, lastName, isActive, _id }, index) => (
+            <ListKoders firstName={firstName} lastName={lastName} isActive={isActive} id={_id} key={index}/>
           ))
         }
       </ul>
