@@ -6,7 +6,7 @@ export default function AdminProfileForm ({closeModal}) {
     const onSubmit = (data, e) => {
         console.log(data)
         e.target.reset();
-        fetch('http://kodemiaappback-chatty-bandicoot-kf.mybluemix.net/koders/60dfce7b5a54fc3f5c716090',{
+        fetch('http://kodemiaappback-chatty-bandicoot-kf.mybluemix.net/admins/60e8f9a46afe523c2c54288c',{
             method:'PATCH',
             body: JSON.stringify(data),
             mode: 'cors',

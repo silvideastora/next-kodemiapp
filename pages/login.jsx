@@ -27,6 +27,10 @@ export default function login() {
       e.target.reset();
       const loginMentor = await MentorLogin(data)
       console.log(loginMentor)
+      console.log(loginMentor.data.token)
+      localStorage.setItem( 'typeUser', loginMentor.message)
+      localStorage.setItem( 'token', loginMentor.data.token)
+      Router.push('adminboard')
     } 
   };
 
