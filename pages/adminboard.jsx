@@ -9,18 +9,27 @@ import Posts from '../components/Posts'
 import Layout from '../components/Layout'
 import { GetPosts } from '../lib/api'
 import GenerationsKoders from '../components/GenerationsKoders'
+import Router from 'next/router'
+
 
 
 export default function AdminBoard() {
   const [posts, setPosts] = useState([])
   useEffect(async () => {
+    if (typeof window !== 'undefined') {
+      const token = window.localStorage.getItem('token')
+      const typeUser = window.localStorage.getItem('typeUser')
+      if (!token || typeUser === 'Koder logged') {
+
+        Router.push('login')
+      }
+    }
     const postsResponse = await GetPosts({
       generation: {
         bootcamp: 'JS',
         number: 10
       },
     })
-    console.log(postsResponse)
     setPosts(postsResponse.data)
   }, [])
 

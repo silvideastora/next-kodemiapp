@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import koders from '../../config/koders.json'
 import ListKoders from './ListKoders'
 
-export default function ListKodersNames({firstName, lastName}) {
-
+export default function ListKodersNames({koders}) {
+  console.log(koders)
   const [ checked, setChecked ] = useState(false)
   return (
     <div>
