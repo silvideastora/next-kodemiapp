@@ -3,7 +3,7 @@ import {useState} from 'react'
 import Modal from 'react-modal'
 import AdminProfileForm from './AdminProfileForm'
 
-export default function KoderProfileCard({ admin }) {
+export default function AdminProfileCard({ admin }) {
     const [activeModal, setActiveModal] = useState (false)     
     const changeProfile = (admin) => {
       setActiveModal (true)

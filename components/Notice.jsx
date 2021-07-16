@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
-export default function notice({closeModal}) {
+export default function Notice({closeModal}) {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
   const onSubmit = (data, e) => {
