@@ -3,16 +3,27 @@ import ResourcesContainer from '../../components/ResourcesContainer'
 import {useState, useEffect} from 'react'
 
 export default function ResourcesScreen () {
+
+  useEffect(() => {
+    if( typeof window !== 'undefined'){
+      const token = window.localStorage.getItem('token')
+      if( !token ) {
+        Router.push('login')
+      }
+    }
+  }, [])
+
 	const [resources, setResources] = useState([])
   useEffect(() => {
 		fetch('http://kodemiaappback-chatty-bandicoot-kf.mybluemix.net/resources/byModule')
 		.then(response => response.json())
 		.then(data => setResources(data.resources));
 	},[])
-    return (
-        <div className='flex-wrap h-full grid grid-cols-auto gap-4'>
-        <ResourcesContainer resources={resources}/>    
+
+  return (
+    <div className='flex-wrap h-full grid grid-cols-auto gap-4'>
+      <ResourcesContainer resources={resources}/>    
     </div>
-    )
+  )
     
 }
