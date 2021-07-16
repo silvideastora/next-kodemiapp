@@ -8,6 +8,7 @@ import admin from '../config/admin.json'
 import Posts from '../components/Posts'
 import Layout from '../components/Layout'
 import { GetPosts } from '../lib/api'
+import GenerationsKoders from '../components/GenerationsKoders'
 
 
 export default function AdminBoard() {
@@ -43,6 +44,9 @@ export default function AdminBoard() {
           </div>
           <div className='col-span-1 lg:col-span-3'>
             <ModuleBox modules={Modules} />
+          </div>
+          <div className='col-span-1 lg:col-span-3'>
+            <GenerationsKoders/>
           </div>
         </div>
       </div>
