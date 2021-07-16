@@ -35,7 +35,8 @@ export default function ModuleBox({ modules }) {
           'py-6',
           'shadow-xl rounded-lg',
           'text-white',
-          'font-semibold'
+          'font-semibold',
+          'h-full'
         )}>
           <div className={classNames(
             'p-2'

@@ -8,7 +8,7 @@ import admin from '../config/admin.json'
 import Posts from '../components/Posts'
 import Layout from '../components/Layout'
 import { GetPosts } from '../lib/api'
-import GenerationsKoders from '../components/GenerationsKoders'
+import GenerationsKoders from '../components/GenerationBox/GenerationsKoders'
 import Router from 'next/router'
 
 
