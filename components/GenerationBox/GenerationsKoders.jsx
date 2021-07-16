@@ -18,6 +18,7 @@ const GenerationsKoders = () => {
     console.log(koders.data)
     setGenerationData(generation.data)
     console.log('selectedGeneration es:', selectedGeneration)
+    window.localStorage.setItem('numberGeneration', selectedGeneration)
   }, [selectedGeneration])
 
   const handleOnClick = (number) => {

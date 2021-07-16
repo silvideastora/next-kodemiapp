@@ -142,13 +142,17 @@ export default function login() {
                 >
                   Ingresar
                 </button>
-                <Link href='/help'>
+                <div className={(
+                  'relative flex flex-col group'
+                )}>
+                <div className='has-tooltip'>
                   <a className={classNames(
                     'flex justify-end',
-                    'mt-2',
-                    'hover:underline hover:text-cyan-ka'
+                    'mt-4',
+                    'hover:text-cyan-ka'
                   )}>Necesito ayuda</a>
-                </Link>
+                </div>
+                </div>
               </form>
             </div>
           </div>

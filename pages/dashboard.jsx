@@ -36,11 +36,6 @@ export default function Dashboard() {
       const koderData = { ...koderInfo.data, generation: generationById.data.generationNumber }
       setDataKoder(koderData)
     }
-
-
-
-
-
   }, [])
 
   return (
@@ -52,13 +47,11 @@ export default function Dashboard() {
         <div className={classNames(
           'grid',
           'grid-cols-2',
-          'p-2',
-          'px-8',
-          'sm:py-12',
+          'py-6 md:py-16',
+          'px-3',
           'xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3',
-          'md:py-16',
-          'lg:gap-4',
-          'mx-auto mt-10'
+          'gap-y-4 lg:gap-y-16 lg:gap-x-8 ',
+          'mx-auto'
         )}>
           <KoderProfileCard koder={dataKoder} />
           <div className='lg:col-span-2 sm:grid-col-1'>
