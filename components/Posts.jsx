@@ -43,8 +43,8 @@ export default function Posts ({posts, isAdmin}) {
           )}type='button'>Crear nuevo</button>}
         </div>
         <div className={classNames(
-          'col-span-2 xs:col-span-1',
-          'flex-grow-0'
+          //'col-span-1',
+          'flex flex-col sm:col-span-1'
         )}>
             <div className={classNames(
                 'bg-black-ka',
@@ -59,10 +59,9 @@ export default function Posts ({posts, isAdmin}) {
                 )}>
                     <div className={classNames(
                       'bg-black-ka',
-                      ' w-full'
+                      ' w-full',
                       )}>
-                        <Slider {...settings}
-                        >
+                        <Slider {...settings}>
                           {posts.map((post,index)=>(
                             <div key={index}>
                               <div className={classNames('flex'
@@ -78,32 +77,41 @@ export default function Posts ({posts, isAdmin}) {
                                   <h3 className={classNames(
                                     'flex items-start',
                                     'lg:text-xl font-semibold'
-                                    )}>{post.title}
+                                     )}>
+                                      {/* {post.title} */}
+                                      Taller de AWS
                                   </h3>
                                   <p className={classNames(
                                     'mt-1 mr-1',
                                     'font-light',
                                     ' text-sm '
-                                    )}>{post.createdAt}
+                                    )}>
+                                      {/* {post.createdAt} */}
+                                      17/08/2019
                                   </p>
                                   <p className={classNames(
                                     'font-normal',
                                     'mt-2'
-                                    )}>{post.info}
-                                  </p>
-                                  <i className={classNames(
-                                    'block',
-                                    'far fa-heart',
-                                    'mr-2 mt-2',
-                                    'mx-auto',
-                                    'stroke-current',
-                                    'text-2xl text-right text-cyan-ka'
                                     )}>
+                                      {/* {post.info} */}
+                                    El taller de aws se llevará a cabo el día sábado a las 10:00 a.m., lo imparte Charles Silva. Recuerda hacer tu cuenta en la página.
+                                  </p>
+                                  <div className='text-right'>
+                                    <i className={classNames(
+                                      // 'block',
+                                      'far fa-heart',
+                                      'mr-2 mt-2',
+                                      'mx-auto',
+                                      'stroke-current',
+                                      'text-xl text-cyan-ka'
+                                    )}>
+                                    </i>
                                     <span className={classNames(
-                                      'text-xs'
-                                      )}>{post.likes}
+                                      'text-xs text-cyan-ka'
+                                      )}>
+                                        {post.likes}
                                     </span>
-                                  </i>
+                                  </div>   
                                 </div>
                               </div>
                             </div>

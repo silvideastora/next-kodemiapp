@@ -14,16 +14,16 @@ export default function KoderProfileCard({ koder }) {
   }
 
   return (
-    <div>
+    <div >
       <h3 className={classNames(
-          'mb-3.5'
+          'mb-2 hidden sm:block'
         )}>Perfil</h3>
       <div className={classNames(
         'bg-black-ka',
         'border border-white-ka',
         'mb-0.5',
         'px-4',
-        'py-2',
+        'py-8',
         'rounded-lg',
         'flex flex-col',
         'items-center justify-center',
