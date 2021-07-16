@@ -8,7 +8,7 @@ import Posts from '../components/Posts'
 import posts from '../config/posts.json'
 import Layout from '../components/Layout'
 import Router from 'next/router'
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 export default function Dashboard() {
 
@@ -24,12 +24,20 @@ export default function Dashboard() {
 
   return (
     <Layout footer={false}>
-      <div className='container bg-black'>
-        <div className='container h-auto bg-black xs:hidden'>
-        <img className='object-cover h-auto w-full opacity-50' src='../images/banner-ka.jpeg'/>
+      <div className='container'>
+        <div className='container h-auto xs:hidden'>
+          <img className='object-cover h-auto w-full' src='../images/banner-ka.png'/>
         </div>
         <div className={classNames(
-        'grid','grid-cols-2','p-2','px-8','sm:py-12','sm:grid-cols-1','md:grid-cols-1', 'md:py-16','lg:grid-cols-3','lg:gap-4', 'xs:grid-cols-1','mx-auto'
+          'grid',
+          'grid-cols-2',
+          'p-2',
+          'px-8',
+          'sm:py-12',
+          'xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3',
+          'md:py-16',
+          'lg:gap-4',
+          'mx-auto mt-10'
         )}>
         <KoderProfileCard koder={koder}/>
         <div className='lg:col-span-2 sm:grid-col-1'>
