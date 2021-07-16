@@ -45,7 +45,7 @@ export default function AdminProfileForm ({closeModal}) {
               <input {...register('lastName', {
                   required: { value: true, message: 'Campo obligatorio...' }
                 })} className={classNames('input-modal')}
-                id='las-name' type='text' placeholder='Apellido'/> 
+                id='last-name' type='text' placeholder='Apellido'/> 
             </div>
             <div className={classNames('mb-4')}>
               <label className={classNames(
