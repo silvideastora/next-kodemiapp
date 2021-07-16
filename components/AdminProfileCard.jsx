@@ -14,13 +14,15 @@ export default function AdminProfileCard({ admin }) {
   
     return (
     <div>
-				<h3>Perfil</h3>
+				<h3 className={classNames(
+          'mb-3.5'
+        )}>Perfil</h3>
         <div className={classNames(
           'bg-black-ka',
           'border border-white-ka',
           'mb-0.5',
           'px-4',
-          'py-2',
+          'py-0.5',
           'rounded-lg',
           'flex flex-col',
           'items-center justify-center',

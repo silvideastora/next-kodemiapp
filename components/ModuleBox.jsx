@@ -22,12 +22,14 @@ export default function ModuleBox({modules}) {
         'xs:grid-cols-1 '
         )}>
         <div>
-          <h3>Módulos</h3>
+            <h3 className={classNames(
+              'mb-3.5'
+            )}>Módulos</h3>
             <div className={classNames(
             'bg-black-ka',
             'border border-white-ka',
             'mb-0.5',
-            'py-6',
+            'py-2',
             'shadow-xl rounded-lg',
             'text-white',
             'font-semibold'
@@ -53,13 +55,13 @@ export default function ModuleBox({modules}) {
             </div>
         </div>
         <div className='col-span-2'>
-          <h3>Recursos</h3>
+          <h3 className={classNames(
+            'mb-3.5'
+          )}>Recursos</h3>
         
           <div className= {classNames(
             'bg-black-ka',
             'border border-white-ka',
-            'min-h-full',
-            '',
             'py-2 px-5', 
             'rounded-lg',
             'text-white-ka',
