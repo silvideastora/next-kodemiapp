@@ -49,7 +49,7 @@ export default function ResourcesContainer({ resources }) {
                   <a href={resource.resources} target='_blank' className={classNames(
                     'break-words',
                     'w-full',
-                    'text-gray-inactive hover:text-white-ka'
+                    'text-gray-inactive text-sm hover:text-white-ka'
                   )}>
                     {resource.resources}
                   </a>
