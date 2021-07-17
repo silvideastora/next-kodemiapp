@@ -142,7 +142,7 @@ export default function login() {
                 >
                   Ingresar
                 </button>
-                <div className={(
+                {/* <div className={(
                   'relative flex flex-col group'
                 )}>
                 <div className='has-tooltip'>
@@ -152,7 +152,7 @@ export default function login() {
                     'hover:text-cyan-ka'
                   )}>Necesito ayuda</a>
                 </div>
-                </div>
+                </div> */}
               </form>
             </div>
           </div>
